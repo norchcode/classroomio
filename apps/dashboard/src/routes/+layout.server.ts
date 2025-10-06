@@ -49,6 +49,7 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
 
         // Organization by subdomain not found
         if (!org) {
+          console.log(`Organization not found for subdomain: ${subdomain}`);
           return response;
         }
 
@@ -107,6 +108,7 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
   } else if (!blockedSubdomain.includes(subdomain)) {
     if (APP_SUBDOMAINS.includes(subdomain)) {
       // This is an app domain specified in the .env file
+      // For app subdomains, return response without org context
       return response;
     }
 
@@ -121,6 +123,8 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
       response.org = (await getCurrentOrg(response.orgSiteName, true)) || null;
 
       if (!response.org && !isDev) {
+        // For organization subdomains that don't exist, redirect with a more friendly message
+        console.log(`Organization not found for subdomain: ${response.orgSiteName}`);
         throw redirect(307, 'https://app.classroomio.com/404?type=org');
       } else if (!response.org && _orgSiteName) {
         cookies.delete('_orgSiteName', { path: '/' });

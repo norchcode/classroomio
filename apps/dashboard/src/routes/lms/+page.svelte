@@ -43,7 +43,9 @@
     progressPercentage = Math.round((totalCompleted / totalLessons) * 100) || 0;
   }
 
-  $: getCourses($profile.id, $currentOrg.id);
+  $: if ($profile.id && $currentOrg.id) {
+    getCourses($profile.id, $currentOrg.id);
+  }
   $: calcTotalProgress($courses);
 </script>
 
@@ -67,7 +69,7 @@
     >
       <div class="w-full md:w-[75%] lg:w-[80%]">
         <p class=" mb-5 text-xs font-normal text-white lg:text-xl">
-          {$currentOrg.customization.dashboard.bannerText
+          {$currentOrg?.customization?.dashboard?.bannerText
             ? $currentOrg.customization.dashboard.bannerText
             : $t('dashboard.lms_dashboard_hero')}
         </p>
@@ -78,7 +80,7 @@
         />
       </div>
       <img
-        src={$currentOrg.customization.dashboard.bannerImage
+        src={$currentOrg?.customization?.dashboard?.bannerImage
           ? $currentOrg.customization.dashboard.bannerImage
           : '/images/student-learning.svg'}
         alt="student Learning Pictogram"
