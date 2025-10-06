@@ -199,7 +199,29 @@ export async function getProfile({
         if (dev) {
           goto('/lms');
         } else {
-          window.location.replace(`${currentOrgDomainStore}/lms`);
+          // Only redirect to org domain if it's available and valid
+          if (currentOrgDomainStore && currentOrgDomainStore !== '') {
+            window.location.replace(`${currentOrgDomainStore}/lms`);
+          } else {
+            // If org domain is not set, try to construct the proper subdomain URL
+            // Get the organization site name from the results
+            if (orgRes.currentOrg?.siteName) {
+              const host = window.location.host;
+              const domainParts = host.split('.');
+              if (domainParts.length >= 2) {
+                // Construct subdomain URL: {orgSiteName}.{restOfDomain}
+                const mainDomain = domainParts.slice(-2).join('.'); // e.g., "codeplanet.qzz.io"
+                const properOrgUrl = `https://${orgRes.currentOrg.siteName}.${mainDomain}/lms`;
+                window.location.replace(properOrgUrl);
+              } else {
+                // Fallback to /lms if we can't construct the proper URL
+                goto('/lms');
+              }
+            } else {
+              // If we don't have the org info yet, wait for it to load
+              goto('/lms');
+            }
+          }
         }
       } else if (isEmpty(orgRes.orgs) && !path.includes('invite')) {
         // Not on invite page or no org, go to onboarding
