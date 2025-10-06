@@ -1,5 +1,4 @@
 import { getSupabase, supabase } from '$lib/utils/functions/supabase';
-
 import type { CurrentOrg } from '$lib/utils/types/org';
 import { PUBLIC_IS_SELFHOSTED } from '$env/static/public';
 import type { MetaTagsProps } from 'svelte-meta-tags';
@@ -45,16 +44,22 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
 
     // Student dashboard
     if (subdomain) {
-      const org = (await getCurrentOrg(subdomain, true)) || null;
+      try {
+        const org = (await getCurrentOrg(subdomain, true)) || null;
 
-      // Organization by subdomain not found
-      if (!org) {
+        // Organization by subdomain not found
+        if (!org) {
+          return response;
+        }
+
+        response.org = org;
+        response.isOrgSite = true;
+        response.orgSiteName = subdomain;
+      } catch (error) {
+        console.error('Error loading organization:', error);
+        // Return default response on error
         return response;
       }
-
-      response.org = org;
-      response.isOrgSite = true;
-      response.orgSiteName = subdomain;
     }
 
     // Never go beyond this for selfhosted instances
@@ -82,18 +87,23 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
 
   if (isURLCustomDomain(url)) {
     // Custom domain
-    response.org = (await getCurrentOrg(url.host, true, true)) || null;
+    try {
+      response.org = (await getCurrentOrg(url.host, true, true)) || null;
 
-    console.log('custom domain response.org', response.org);
+      console.log('custom domain response.org', response.org);
 
-    if (!response.org) {
-      console.error('Custom domain org not found, loading dashboard');
+      if (!response.org) {
+        console.error('Custom domain org not found, loading dashboard');
+        return response;
+      }
+
+      response.isOrgSite = true;
+      response.orgSiteName = response.org?.siteName || '';
+      return response;
+    } catch (error) {
+      console.error('Error loading custom domain org:', error);
       return response;
     }
-
-    response.isOrgSite = true;
-    response.orgSiteName = response.org?.siteName || '';
-    return response;
   } else if (!blockedSubdomain.includes(subdomain)) {
     if (APP_SUBDOMAINS.includes(subdomain)) {
       // This is an app domain specified in the .env file
@@ -106,12 +116,21 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
 
     response.isOrgSite = debugMode || answer;
     response.orgSiteName = debugMode ? _orgSiteName : subdomain;
-    response.org = (await getCurrentOrg(response.orgSiteName, true)) || null;
+    
+    try {
+      response.org = (await getCurrentOrg(response.orgSiteName, true)) || null;
 
-    if (!response.org && !isDev) {
-      throw redirect(307, 'https://app.classroomio.com/404?type=org');
-    } else if (!response.org && _orgSiteName) {
-      cookies.delete('_orgSiteName', { path: '/' });
+      if (!response.org && !isDev) {
+        throw redirect(307, 'https://app.classroomio.com/404?type=org');
+      } else if (!response.org && _orgSiteName) {
+        cookies.delete('_orgSiteName', { path: '/' });
+      }
+    } catch (error) {
+      console.error('Error loading organization:', error);
+      // Don't throw, just return default response
+      if (error instanceof Response) {
+        throw error; // Re-throw redirects
+      }
     }
   } else if (subdomain === 'play' || debugPlay === 'true') {
     response.skipAuth = true;

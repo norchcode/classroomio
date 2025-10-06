@@ -1,0 +1,1 @@
+web: cd apps/dashboard && PORT=${PORT:-3000} node build
