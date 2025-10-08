@@ -21,5 +21,8 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "vitest.disableWorkspaceWarning": true
+  "vitest.disableWorkspaceWarning": true,
+  "yaml.schemas": {
+    "https://www.artillery.io/schema.json": []
+  }
 }

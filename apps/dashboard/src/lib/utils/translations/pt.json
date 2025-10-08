@@ -1011,7 +1011,7 @@
         "remove": "Remover",
         "custom_favicon": "Favicon personalizado",
         "custom_code": "Código personalizado",
-        "custom_domain_not_classroomio": "O domínio não pode conter 'classroomio'"
+        "custom_domain_not_classroomio": "O domínio não pode conter o domínio principal da plataforma"
       },
       "customize-lms": {
         "title": "Personalizar LMS",

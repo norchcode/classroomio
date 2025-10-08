@@ -1011,7 +1011,7 @@
         "remove": "निकालना",
         "custom_favicon": "कस्टम फ़ेविकॉन",
         "custom_code": "कस्टम कोड",
-        "custom_domain_not_classroomio": "डोमेन में 'classroomio' नहीं हो सकता"
+        "custom_domain_not_classroomio": "डोमेन में मुख्य प्लेटफॉर्म डोमेन नहीं होना चाहिए"
       },
       "customize-lms": {
         "title": "एलएमएस को अनुकूलित करें",
