@@ -7,18 +7,18 @@ This document summarizes the changes made to customize ClassroomIO for self-host
 
 ### 1. Org Domain Detection Fix
 **File:** `apps/dashboard/src/lib/utils/store/org.ts`
-- Added import for private environment variables: `import { env } from '$env/dynamic/private';`
-- Updated `currentOrgDomain` derived store to use `env.PRIVATE_APP_HOST` instead of extracting domain from browser URL
+- Added import for public environment variables: `import { PRIVATE_APP_HOST } from '$env/static/public';`
+- Updated `currentOrgDomain` derived store to use `PRIVATE_APP_HOST` instead of extracting domain from browser URL
 - Changed from hardcoded `.slice(-2).join('.')` approach to using environment variable for proper domain detection
 - This fixes the "View Site" button to correctly point to organization custom domains
 
 ### 2. Custom Domain Settings UI Updates
 **File:** `apps/dashboard/src/lib/components/Org/Settings/Domains.svelte`
-- Added import for private environment variables: `import { env } from '$env/dynamic/private';`
-- Updated the helper message for organization site name: `https://{siteName}.{env.PRIVATE_APP_HOST || 'classroomio.com'}`
-- Updated the custom domain input placeholder to use environment variable: `courses.{env.PRIVATE_APP_HOST || 'yourwebsite.com'}`
-- Updated the custom domain helper message to use environment variable: `https://{customDomain || `course.{env.PRIVATE_APP_HOST || 'yourwebsite.com'}`}`
-- Updated the validation to check against `env.PRIVATE_APP_HOST` instead of hardcoded 'classroomio.com'
+- Added import for public environment variables: `import { PRIVATE_APP_HOST } from '$env/static/public';`
+- Updated the helper message for organization site name: `https://{siteName}.{PRIVATE_APP_HOST || 'classroomio.com'}`
+- Updated the custom domain input placeholder to use environment variable: `courses.{PRIVATE_APP_HOST || 'yourwebsite.com'}`
+- Updated the custom domain helper message to use environment variable: `https://{customDomain || `course.{PRIVATE_APP_HOST || 'yourwebsite.com'}`}`
+- Updated the validation to check against `PRIVATE_APP_HOST` instead of hardcoded 'classroomio.com'
 
 ### 3. Translation Updates
 **Files:** All translation files in `apps/dashboard/src/lib/utils/translations/`

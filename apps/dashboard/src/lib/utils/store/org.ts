@@ -1,10 +1,9 @@
 import type { CurrentOrg, OrgAudience, OrgTeamMember } from '../types/org';
 import { browser, dev } from '$app/environment';
 import { derived, writable } from 'svelte/store';
-import { env } from '$env/dynamic/private';
 
 import { PLAN } from 'shared/src/plans/constants';
-import { PUBLIC_IS_SELFHOSTED } from '$env/static/public';
+import { PUBLIC_IS_SELFHOSTED, PRIVATE_APP_HOST } from '$env/static/public';
 import { ROLE } from '$lib/utils/constants/roles';
 import { STEPS } from '../constants/quiz';
 import type { UserLessonDataType } from '$lib/utils/types';
@@ -54,7 +53,7 @@ export const currentOrgDomain = derived(currentOrg, ($currentOrg) => {
   const browserOrigin = dev && browser && window.location.origin;
 
   // Use PRIVATE_APP_HOST from environment variable instead of extracting from window.location
-  const appHost = env.PRIVATE_APP_HOST || 'classroomio.com'; // Fallback to default
+  const appHost = PRIVATE_APP_HOST || 'classroomio.com'; // Fallback to default
 
   return browserOrigin
     ? browserOrigin

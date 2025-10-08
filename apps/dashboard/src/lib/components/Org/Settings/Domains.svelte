@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { env } from '$env/dynamic/private';
+  import { PUBLIC_IS_SELFHOSTED, PRIVATE_APP_HOST } from '$env/static/public';
   import { Column, CopyButton, Grid, Row } from 'carbon-components-svelte';
   import ArrowUpRight from 'carbon-icons-svelte/lib/ArrowUpRight.svelte';
   import Restart from 'carbon-icons-svelte/lib/Restart.svelte';
@@ -90,7 +90,7 @@
       return;
     }
 
-    if (sanitizedDomain.includes(env.PRIVATE_APP_HOST || 'classroomio.com')) {
+    if (sanitizedDomain.includes(PRIVATE_APP_HOST || 'classroomio.com')) {
       errors.customDomain = $t('components.settings.domains.custom_domain_not_classroomio');
       return;
     }
@@ -225,7 +225,7 @@
         <!-- Org Site Name -->
         <TextField
           label="URL"
-          helperMessage={`https://${siteName || ''}.${env.PRIVATE_APP_HOST || 'classroomio.com'}`}
+          helperMessage={`https://${siteName || ''}.${PRIVATE_APP_HOST || 'classroomio.com'}`}
           bind:value={siteName}
           type="text"
           placeholder="e.g traversymedia"
@@ -353,8 +353,8 @@
           <TextField
             bind:value={customDomain}
             type="text"
-            placeholder={`courses.${env.PRIVATE_APP_HOST || 'yourwebsite.com'}`}
-            helperMessage={`https://${customDomain || `course.${env.PRIVATE_APP_HOST || 'yourwebsite.com'}`}`}
+            placeholder={`courses.${PRIVATE_APP_HOST || 'yourwebsite.com'}`}
+            helperMessage={`https://${customDomain || `course.${PRIVATE_APP_HOST || 'yourwebsite.com'}`}`}
             errorMessage={errors.customDomain}
             className="w-4/5"
             isDisabled={$isFreePlan}
