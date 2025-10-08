@@ -44,4 +44,7 @@ For the custom domain functionality to work properly, ensure these environment v
 - Added Indonesian locale to LOCALE enum in types/index.ts
 - Indonesian language will now be processed by the automatic translation system using RAPID_API_KEY
 
+## Additional Updates
+- Updated pnpm version to 10.18.1 (already set in package.json)
+
 The changes enable the ClassroomIO application to properly work with custom domains in a self-hosted environment while maintaining all functionality and adding Indonesian language support.

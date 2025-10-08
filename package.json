@@ -1,7 +1,7 @@
 {
   "name": "classroomio",
   "version": "0.1.1",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@10.18.1",
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=4096' PUBLIC_IS_SELFHOSTED=true turbo run build --filter=!@cio/classroomio-com --filter=!@cio/docs",
     "dev": "turbo prepare --concurrency 13 && turbo run dev",

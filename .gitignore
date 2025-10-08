@@ -38,3 +38,4 @@ yarn-error.log*
 vite.config.ts*.mjs
 
 .pnpm-store/*
+set_enterprise_plan_guide.md
