@@ -65,8 +65,8 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
         const isMember = await isUserOrgMember(org.id, session.user.id);
         if (!isMember) {
           console.log(`User is not a member of organization: ${subdomain}`);
-          // Redirect to login page for this org
-          throw redirect(307, `https://${subdomain}.${env.PRIVATE_APP_HOST}/login`);
+          // Redirect to login page for the main app, not the org-specific login
+          throw redirect(307, `https://${env.PRIVATE_APP_SUBDOMAINS.split(',')[0]}.${env.PRIVATE_APP_HOST}/login`);
         }
 
         response.org = org;
