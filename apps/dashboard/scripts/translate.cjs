@@ -21,6 +21,7 @@ const languageFiles = {
   es: path.resolve(__dirname, '../src/lib/utils/translations/es.json'),
   fr: path.resolve(__dirname, '../src/lib/utils/translations/fr.json'),
   hi: path.resolve(__dirname, '../src/lib/utils/translations/hi.json'),
+  id: path.resolve(__dirname, '../src/lib/utils/translations/id.json'),
   pl: path.resolve(__dirname, '../src/lib/utils/translations/pl.json'),
   pt: path.resolve(__dirname, '../src/lib/utils/translations/pt.json'),
   ru: path.resolve(__dirname, '../src/lib/utils/translations/ru.json'),

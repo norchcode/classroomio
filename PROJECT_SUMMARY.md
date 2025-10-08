@@ -38,4 +38,9 @@ For the custom domain functionality to work properly, ensure these environment v
 - UI is fully customizable based on environment variables instead of hardcoded values
 - All language translations updated for consistency
 
-The changes enable the ClassroomIO application to properly work with custom domains in a self-hosted environment while maintaining all functionality.
+## Additional Changes - Indonesian Language Support
+- Updated translation script to include Indonesian (id) language
+- Created initial Indonesian translation file (id.json) based on English file
+- Indonesian language will now be processed by the automatic translation system using RAPID_API_KEY
+
+The changes enable the ClassroomIO application to properly work with custom domains in a self-hosted environment while maintaining all functionality and adding Indonesian language support.
