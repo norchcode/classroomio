@@ -41,6 +41,7 @@ For the custom domain functionality to work properly, ensure these environment v
 ## Additional Changes - Indonesian Language Support
 - Updated translation script to include Indonesian (id) language
 - Created initial Indonesian translation file (id.json) based on English file
+- Added Indonesian locale to LOCALE enum in types/index.ts
 - Indonesian language will now be processed by the automatic translation system using RAPID_API_KEY
 
 The changes enable the ClassroomIO application to properly work with custom domains in a self-hosted environment while maintaining all functionality and adding Indonesian language support.
