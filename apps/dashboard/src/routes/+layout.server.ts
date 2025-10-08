@@ -200,8 +200,30 @@ function getSubdomain(url: URL) {
   const host = url.host.replace('www.', '');
   const parts = host?.split('.');
 
-  if (host?.endsWith(env.PRIVATE_APP_HOST)) {
-    return parts?.length >= 3 ? parts[0] : null;
+  // For codeplanet.qzz.io domain structure, extract subdomain properly
+  if (env.PRIVATE_APP_HOST && host?.endsWith(env.PRIVATE_APP_HOST)) {
+    // Calculate how many parts are in the base domain: codeplanet.qzz.io = 3 parts
+    const baseDomainParts = env.PRIVATE_APP_HOST.split('.').length;
+    
+    // Calculate how many parts come before the base domain
+    const possibleSubdomainParts = parts.length - baseDomainParts;
+    
+    // If we have parts before the base domain, process them
+    if (possibleSubdomainParts > 0) {
+      // Get the parts before the base domain
+      const beforeBaseDomain = parts.slice(0, possibleSubdomainParts);
+      
+      // Find the organization subdomain part
+      // If we have app subdomains in the mix (like 'app'), we need to exclude them
+      // Handle cases like {orgname}.app.{domain} or just {orgname}.{domain}
+      for (let i = beforeBaseDomain.length - 1; i >= 0; i--) {
+        const part = beforeBaseDomain[i];
+        // Return the first non-app subdomain from right to left
+        if (!APP_SUBDOMAINS.includes(part)) {
+          return part;
+        }
+      }
+    }
   }
 
   return null;
