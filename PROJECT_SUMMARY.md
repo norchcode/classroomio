@@ -7,18 +7,16 @@ This document summarizes the changes made to customize ClassroomIO for self-host
 
 ### 1. Org Domain Detection Fix
 **File:** `apps/dashboard/src/lib/utils/store/org.ts`
-- Added import for public environment variables: `import { PRIVATE_APP_HOST } from '$env/static/public';`
-- Updated `currentOrgDomain` derived store to use `PRIVATE_APP_HOST` instead of extracting domain from browser URL
+- Updated `currentOrgDomain` derived store to use `import.meta.env.VITE_APP_HOST` instead of extracting domain from browser URL
 - Changed from hardcoded `.slice(-2).join('.')` approach to using environment variable for proper domain detection
 - This fixes the "View Site" button to correctly point to organization custom domains
 
 ### 2. Custom Domain Settings UI Updates
 **File:** `apps/dashboard/src/lib/components/Org/Settings/Domains.svelte`
-- Added import for public environment variables: `import { PRIVATE_APP_HOST } from '$env/static/public';`
-- Updated the helper message for organization site name: `https://{siteName}.{PRIVATE_APP_HOST || 'classroomio.com'}`
-- Updated the custom domain input placeholder to use environment variable: `courses.{PRIVATE_APP_HOST || 'yourwebsite.com'}`
-- Updated the custom domain helper message to use environment variable: `https://{customDomain || `course.{PRIVATE_APP_HOST || 'yourwebsite.com'}`}`
-- Updated the validation to check against `PRIVATE_APP_HOST` instead of hardcoded 'classroomio.com'
+- Updated the helper message for organization site name: `https://{siteName}.${import.meta.env.VITE_APP_HOST || 'classroomio.com'}`
+- Updated the custom domain input placeholder to use environment variable: `courses.${import.meta.env.VITE_APP_HOST || 'yourwebsite.com'}`
+- Updated the custom domain helper message to use environment variable: `https://{customDomain || `course.${import.meta.env.VITE_APP_HOST || 'yourwebsite.com'}`}`
+- Updated the validation to check against `import.meta.env.VITE_APP_HOST` instead of hardcoded 'classroomio.com'
 
 ### 3. Translation Updates
 **Files:** All translation files in `apps/dashboard/src/lib/utils/translations/`
@@ -28,7 +26,7 @@ This document summarizes the changes made to customize ClassroomIO for self-host
 
 ## Environment Variables Required
 For the custom domain functionality to work properly, ensure these environment variables are set:
-- `PRIVATE_APP_HOST=codeplanet.qzz.io` (your main domain)
+- `VITE_APP_HOST=codeplanet.qzz.io` (your main domain, with VITE_ prefix for client-side access)
 - `PRIVATE_APP_SUBDOMAINS=app` (your main app subdomain)
 - `PUBLIC_IS_SELFHOSTED=true` (for self-hosted instance)
 

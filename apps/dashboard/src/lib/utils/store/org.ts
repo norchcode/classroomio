@@ -3,7 +3,7 @@ import { browser, dev } from '$app/environment';
 import { derived, writable } from 'svelte/store';
 
 import { PLAN } from 'shared/src/plans/constants';
-import { PUBLIC_IS_SELFHOSTED, PRIVATE_APP_HOST } from '$env/static/public';
+import { PUBLIC_IS_SELFHOSTED } from '$env/static/public';
 import { ROLE } from '$lib/utils/constants/roles';
 import { STEPS } from '../constants/quiz';
 import type { UserLessonDataType } from '$lib/utils/types';
@@ -52,15 +52,23 @@ export const currentOrgPath = derived(currentOrg, ($currentOrg) =>
 export const currentOrgDomain = derived(currentOrg, ($currentOrg) => {
   const browserOrigin = dev && browser && window.location.origin;
 
-  // Use PRIVATE_APP_HOST from environment variable instead of extracting from window.location
-  const appHost = PRIVATE_APP_HOST || 'classroomio.com'; // Fallback to default
+  // Get app host from environment or fallback to classroomio.com
+  // Since PRIVATE_APP_HOST is not directly imported, we'll construct the domain differently
+  // The actual domain should be configured through PUBLIC environment variables
+  const appHost = typeof window !== 'undefined' 
+    ? window.location.hostname.replace(/^[\w-]+\./, '')  // Remove subdomain part
+    : 'classroomio.com';
+
+  // For self-hosted instances, the domain should be configured via PUBLIC environment variables
+  // which will be available during build time
+  const defaultHost = import.meta.env.VITE_APP_HOST || 'classroomio.com';
 
   return browserOrigin
     ? browserOrigin
     : $currentOrg.customDomain && $currentOrg.isCustomDomainVerified
       ? `https://${$currentOrg.customDomain}`
       : $currentOrg.siteName
-        ? `https://${$currentOrg.siteName}.${appHost}`
+        ? `https://${$currentOrg.siteName}.${defaultHost}`
         : '';
 });
 
