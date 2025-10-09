@@ -46,3 +46,21 @@ For the custom domain functionality to work properly, ensure these environment v
 - Updated pnpm version to 10.18.1 (already set in package.json)
 
 The changes enable the ClassroomIO application to properly work with custom domains in a self-hosted environment while maintaining all functionality and adding Indonesian language support.
+
+## Git Workflow Process
+
+### Standard Development Workflow
+After every fix, update, improvement, feature addition, or any change in the repository:
+1. `git add .` - Stage all changes
+2. `git commit -m "fix: description of changes"` - Commit with conventional commit message
+3. `git push origin main` - Push to main branch
+4. Update this PROJECT_SUMMARY.md with details of changes made (excluded from git commits)
+
+### Conventional Commit Messages
+- `fix:` - Bug fixes
+- `feat:` - New features
+- `docs:` - Documentation changes
+- `style:` - Code style changes
+- `refactor:` - Code refactoring
+- `test:` - Test additions/changes
+- `chore:` - Build process or auxiliary tool changes
