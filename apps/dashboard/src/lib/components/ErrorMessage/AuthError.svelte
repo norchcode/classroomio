@@ -13,6 +13,7 @@
   export let type: 'error' | 'warning' | 'info' | 'success' = 'error';
   export let showForgotPassword = false;
   export let showSignup = false;
+  export let showResendConfirmation = false;
   export let dismissible = true;
 
   const dispatch = createEventDispatcher();
@@ -28,6 +29,10 @@
 
   function handleSignup() {
     goto('/signup');
+  }
+
+  function handleResendConfirmation() {
+    goto('/confirm-email');
   }
 
   $: iconClass = {
@@ -95,6 +100,18 @@
               on:click={handleSignup}
             >
               Don't have an account? Sign up
+            </button>
+          </div>
+        {/if}
+        
+        {#if showResendConfirmation && type === 'warning'}
+          <div class="mt-2">
+            <button
+              type="button"
+              class="text-sm font-medium text-yellow-600 hover:text-yellow-500 dark:text-yellow-400 dark:hover:text-yellow-300"
+              on:click={handleResendConfirmation}
+            >
+              Resend confirmation email
             </button>
           </div>
         {/if}

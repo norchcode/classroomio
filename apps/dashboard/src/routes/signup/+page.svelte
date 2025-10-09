@@ -104,6 +104,20 @@
 
       console.log('Signup successful, user:', authUser);
 
+      // Check if email confirmation is required
+      if (authUser.email_confirmed_at === null) {
+        // Email confirmation is required - show appropriate message
+        showSuccessMessage = true;
+        successMessage = `🎉 Account created successfully! Please check your email (${authUser.email}) and click the confirmation link to activate your account. You'll be able to log in after confirming your email.`;
+        
+        // Redirect to login after showing the message
+        setTimeout(() => {
+          goto('/login');
+        }, 5000);
+        return;
+      }
+
+      // If email is already confirmed (shouldn't happen with confirmations enabled, but just in case)
       // Check if this is an organization site
       if ($globalStore.isOrgSite && $currentOrg.id) {
         const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
@@ -118,7 +132,7 @@
             fullname: regexUsernameMatch[1],
             email: authUser.email,
             metadata,
-            is_email_verified: true, // Since confirmations are disabled
+            is_email_verified: true,
             verified_at: new Date().toISOString()
           })
           .select();

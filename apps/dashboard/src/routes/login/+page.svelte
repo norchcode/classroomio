@@ -62,7 +62,17 @@
       
       if (error) {
         console.log('Authentication error', error);
-        throw error;
+        
+        // Handle specific error cases
+        if (error.message?.includes('email not confirmed') || error.message?.includes('Email not confirmed')) {
+          errorType = 'warning';
+          throw new Error(`Please check your email and click the confirmation link before logging in. If you didn't receive the email, you can request a new confirmation link.`);
+        } else if (error.message?.includes('Invalid login credentials')) {
+          errorType = 'error';
+          throw new Error('Invalid email or password. Please check your credentials and try again.');
+        } else {
+          throw error;
+        }
       }
 
       // If this is an organization site, check if the user belongs to this organization
@@ -170,6 +180,7 @@
       type={errorType} 
       showForgotPassword={true}
       showSignup={true}
+      showResendConfirmation={submitError?.includes('confirmation') || false}
       on:dismiss={dismissError}
     />
     <div class="w-full text-right">
