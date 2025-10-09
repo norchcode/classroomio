@@ -257,28 +257,6 @@ export async function getCurrentOrg(siteName: string, justGet = false, isCustomD
   }
 }
 
-/**
- * Check if a user is a member of an organization
- * @param orgId The organization ID to check
- * @param userId The user ID to check
- * @returns True if the user is a member of the organization, false otherwise
- */
-export async function isUserOrgMember(orgId: string, userId: string): Promise<boolean> {
-  try {
-    const { data, error } = await supabase
-      .from('organizationmember')
-      .select('id')
-      .eq('organization_id', orgId)
-      .eq('profile_id', userId)
-      .single();
-
-    return !error && !!data;
-  } catch (error) {
-    console.error('Error checking organization membership:', error);
-    return false;
-  }
-}
-
 export async function updateOrgPlan(params: {
   supabase: typeof supabase;
   subscriptionId: string;

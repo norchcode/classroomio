@@ -5,7 +5,7 @@ import type { MetaTagsProps } from 'svelte-meta-tags';
 import { blockedSubdomain } from '$lib/utils/constants/app';
 import { dev } from '$app/environment';
 import { env } from '$env/dynamic/private';
-import { getCurrentOrg, isUserOrgMember } from '$lib/utils/services/org';
+import { getCurrentOrg } from '$lib/utils/services/org';
 import { redirect } from '@sveltejs/kit';
 
 if (!supabase) {
@@ -51,22 +51,6 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
         if (!org) {
           console.log(`Organization not found for subdomain: ${subdomain}`);
           return response;
-        }
-
-        // Get session to identify the current user
-        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-        
-        if (sessionError || !session) {
-          console.log('No session found for organization access check');
-          return response;
-        }
-
-        // Check if the current user is a member of this organization
-        const isMember = await isUserOrgMember(org.id, session.user.id);
-        if (!isMember) {
-          console.log(`User is not a member of organization: ${subdomain}`);
-          // Redirect to login page for the main app, not the org-specific login
-          throw redirect(307, `https://${env.PRIVATE_APP_SUBDOMAINS.split(',')[0]}.${env.PRIVATE_APP_HOST}/login`);
         }
 
         response.org = org;
