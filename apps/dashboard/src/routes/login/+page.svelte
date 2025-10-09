@@ -11,6 +11,9 @@
   import { globalStore } from '$lib/utils/store/app';
   import { currentOrg } from '$lib/utils/store/org';
   import { getCurrentOrg } from '$lib/utils/services/org';
+  import { page } from '$app/stores';
+
+  export let data;
 
   let formRef: HTMLFormElement;
   let supabase = getSupabase();
@@ -19,6 +22,19 @@
   let errorType: 'error' | 'warning' | 'info' = 'error';
   let loading = false;
   let errors = Object.assign({}, LOGIN_FIELDS);
+
+  // Get organization name from layout data (server-side) or store (client-side)
+  // Priority: layout data (persists after logout) > store data > fallback
+  $: orgName = data.org?.name || $currentOrg.name || 'ClassroomIO';
+  $: orgLogo = data.org?.avatar_url || $currentOrg.avatar_url;
+  
+  // Debug logging to see what data is available
+  $: console.log('Login page - Organization data:', {
+    layoutData: data.org,
+    storeData: $currentOrg,
+    finalOrgName: orgName,
+    finalOrgLogo: orgLogo
+  });
 
   function dismissError() {
     submitError = '';
@@ -122,10 +138,10 @@
 </script>
 
 <svelte:head>
-  <title>Welcome back to {$currentOrg.name || 'ClassroomIO'}</title>
+  <title>Welcome back to {orgName}</title>
 </svelte:head>
 
-<AuthUI {supabase} isLogin={true} {handleSubmit} isLoading={loading} bind:formRef>
+<AuthUI {supabase} isLogin={true} {handleSubmit} isLoading={loading} bind:formRef orgName={orgName} orgLogo={orgLogo}>
   <div class="mt-4 w-full">
     <p class="mb-6 text-lg font-semibold dark:text-white">{$t('login.welcome')}</p>
     <TextField

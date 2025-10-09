@@ -120,3 +120,40 @@ After every fix, update, improvement, feature addition, or any change in the rep
 - Improved self-hosted deployment with custom domain support
 - Better user experience with proper error handling and redirects
 - More robust subdomain structure handling for `codeplanet.qzz.io`
+
+### 2024-12-19 - Authentication Logic & UI Improvements
+
+**Commit:** `e0183a5c - fix: improve organization authentication logic and error UI/UX`
+
+#### Authentication Fixes
+
+- **Organization Membership Verification**: Fixed logic to properly check if users belong to the organization they're trying to access
+- **Organization ID Resolution**: Added fallback logic to get organization ID from URL context when not available in store
+- **Cross-Organization Access Prevention**: Implemented proper sign-out for users who try to access organizations they don't belong to
+- **Enhanced Error Handling**: Added specific error messages for different authentication scenarios
+
+#### UI/UX Improvements
+
+- **New LoginError Component**: Created a modern, animated error component with better visual design
+- **Error Type System**: Implemented different error types (error, warning, info) with appropriate styling and icons
+- **User-Friendly Messages**: Improved error messages to be more informative and actionable
+- **Dismissible Errors**: Added ability to dismiss error messages with smooth animations
+- **Dark Mode Support**: Full dark mode compatibility for error components
+
+#### Technical Improvements
+
+- **Enhanced Logging**: Added comprehensive console logging for debugging authentication issues
+- **Better Error Recovery**: Improved error handling flow with proper cleanup
+- **Performance Optimization**: Streamlined authentication checks to reduce unnecessary API calls
+
+#### Files Modified
+
+- `apps/dashboard/src/routes/login/+page.svelte` - Authentication logic and error handling
+- `apps/dashboard/src/lib/components/ErrorMessage/LoginError.svelte` - New error component
+
+#### Impact
+
+- Resolved issue where users in the same organization were getting "invalid email/password" errors
+- Fixed security issue where users from different organizations could still access unauthorized orgs
+- Significantly improved user experience with better error messages and visual feedback
+- Enhanced debugging capabilities for authentication issues
