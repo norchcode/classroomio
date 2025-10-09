@@ -43,11 +43,29 @@
         capturePosthogEvent('student_login', {
           email: fields.email
         });
+        
+        // Check if the authenticated user belongs to the current organization
+        const { data: orgMembershipData, error: orgMembershipError } = await supabase
+          .from('organizationmember')
+          .select('id')
+          .eq('profile_id', data.user.id)
+          .eq('organization_id', $currentOrg.id)
+          .single();
+          
+        if (orgMembershipError || !orgMembershipData) {
+          // User is authenticated but doesn't belong to this organization
+          throw new Error('Invalid email or password');
+        }
       }
     } catch (error: any) {
       submitError = error.error_description || error.message;
       loading = false;
+      return;
     }
+    
+    // If we get here, either it's not an org site or the user belongs to the org
+    // Let the normal app flow handle the redirect
+    window.location.reload();
   }
 </script>
 
