@@ -2,6 +2,7 @@
   import AuthUI from '$lib/components/AuthUI/index.svelte';
   import TextField from '$lib/components/Form/TextField.svelte';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
+  import LoginError from '$lib/components/ErrorMessage/LoginError.svelte';
   import { LOGIN_FIELDS } from '$lib/utils/constants/authentication';
   import { getSupabase } from '$lib/utils/functions/supabase';
   import { t } from '$lib/utils/functions/translations';
@@ -9,13 +10,19 @@
   import { capturePosthogEvent } from '$lib/utils/services/posthog';
   import { globalStore } from '$lib/utils/store/app';
   import { currentOrg } from '$lib/utils/store/org';
+  import { getCurrentOrg } from '$lib/utils/services/org';
 
   let formRef: HTMLFormElement;
   let supabase = getSupabase();
   let fields = Object.assign({}, LOGIN_FIELDS);
   let submitError: string;
+  let errorType: 'error' | 'warning' | 'info' = 'error';
   let loading = false;
   let errors = Object.assign({}, LOGIN_FIELDS);
+
+  function dismissError() {
+    submitError = '';
+  }
 
   async function handleSubmit() {
     const validationRes = authValidation(fields);
@@ -28,29 +35,73 @@
 
     try {
       loading = true;
+      submitError = ''; // Clear previous errors
+      
+      // First, authenticate the user
       const { data, error } = await supabase.auth.signInWithPassword({
         email: fields.email,
         password: fields.password
       });
-      console.log('data', data);
-      if (error) throw error;
+      console.log('Authentication data', data);
+      
+      if (error) {
+        console.log('Authentication error', error);
+        throw error;
+      }
 
       // If this is an organization site, check if the user belongs to this organization
       if ($globalStore.isOrgSite) {
-        const { data: orgMembershipData, error: orgMembershipError } = await supabase
-          .from('organizationmember')
-          .select('id')
-          .eq('profile_id', data.user.id)
-          .eq('organization_id', $currentOrg.id)
-          .single();
-          
-        if (orgMembershipError || !orgMembershipData) {
-          // User is authenticated but doesn't belong to this organization
-          throw new Error('Invalid email or password');
+        console.log('Checking organization membership for org site');
+        console.log('Current org:', $currentOrg);
+        
+        // Ensure we have the organization ID
+        let orgId = $currentOrg.id;
+        if (!orgId) {
+          console.log('No org ID in store, trying to get from URL or context');
+          // Try to get organization from the current context
+          const urlParts = window.location.hostname.split('.');
+          if (urlParts.length >= 2) {
+            const siteName = urlParts[0];
+            const orgData = await getCurrentOrg(siteName, true);
+            if (orgData) {
+              orgId = orgData.id;
+              console.log('Got org ID from site name:', orgId);
+            }
+          }
         }
         
+        if (!orgId) {
+          console.error('Cannot determine organization ID');
+          errorType = 'error';
+          throw new Error('Unable to verify organization membership. Please try again.');
+        }
+        
+        // Check organization membership
+        const { data: orgMembershipData, error: orgMembershipError } = await supabase
+          .from('organizationmember')
+          .select('id, role_id')
+          .eq('profile_id', data.user.id)
+          .eq('organization_id', orgId)
+          .single();
+          
+        console.log('Organization membership check:', { orgMembershipData, orgMembershipError });
+        
+        if (orgMembershipError || !orgMembershipData) {
+          // User is authenticated but doesn't belong to this organization
+          console.log('User not a member of this organization');
+          
+          // Sign out the user since they shouldn't have access
+          await supabase.auth.signOut();
+          
+          errorType = 'warning';
+          throw new Error(`You don't have access to this organization. Please contact your administrator or try logging into the correct organization.`);
+        }
+        
+        console.log('User is a valid member of the organization');
         capturePosthogEvent('student_login', {
-          email: fields.email
+          email: fields.email,
+          organization_id: orgId,
+          role_id: orgMembershipData.role_id
         });
       }
       
@@ -58,7 +109,8 @@
         email: fields.email
       });
     } catch (error: any) {
-      submitError = error.error_description || error.message;
+      console.error('Login error:', error);
+      submitError = error.error_description || error.message || 'An unexpected error occurred. Please try again.';
       loading = false;
       return;
     }
@@ -97,9 +149,11 @@
       isDisabled={loading}
       errorMessage={$t(errors.password)}
     />
-    {#if submitError}
-      <p class="text-sm text-red-500">{submitError}</p>
-    {/if}
+    <LoginError 
+      bind:error={submitError} 
+      type={errorType} 
+      on:dismiss={dismissError}
+    />
     <div class="w-full text-right">
       <a class="text-md text-primary-700" href="/forgot"> {$t('login.forgot')} </a>
     </div>
