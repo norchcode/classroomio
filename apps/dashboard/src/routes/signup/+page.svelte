@@ -5,6 +5,8 @@
   import TextField from '$lib/components/Form/TextField.svelte';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import SenjaEmbed from '$lib/components/Senja/Embed.svelte';
+  import AuthError from '$lib/components/ErrorMessage/AuthError.svelte';
+  import SuccessMessage from '$lib/components/ErrorMessage/SuccessMessage.svelte';
   import { SIGNUP_FIELDS } from '$lib/utils/constants/authentication';
   import { getSupabase } from '$lib/utils/functions/supabase';
   import { t } from '$lib/utils/functions/translations';
@@ -18,6 +20,8 @@
   import { currentOrg } from '$lib/utils/store/org';
   import { profile } from '$lib/utils/store/user';
 
+  export let data;
+
   let supabase = getSupabase();
   let fields = Object.assign({}, SIGNUP_FIELDS);
   let loading = false;
@@ -28,11 +32,27 @@
     confirmPassword?: string;
   } = {};
   let submitError: string;
+  let errorType: 'error' | 'warning' | 'info' | 'success' = 'error';
   let disableSubmit = false;
   let formRef: HTMLFormElement;
+  let showSuccessMessage = false;
+  let successMessage = '';
 
   let query = new URLSearchParams($page.url.search);
   let redirect = query.get('redirect');
+
+  // Get organization name from layout data (server-side) or store (client-side)
+  $: orgName = data.org?.name || $currentOrg.name || 'ClassroomIO';
+  $: orgLogo = data.org?.avatar_url || $currentOrg.avatar_url;
+
+  function dismissError() {
+    submitError = '';
+  }
+
+  function dismissSuccess() {
+    showSuccessMessage = false;
+    successMessage = '';
+  }
 
   async function handleSubmit() {
     const validationRes = authValidation(fields);
@@ -45,6 +65,7 @@
 
     try {
       loading = true;
+      submitError = ''; // Clear previous errors
 
       const {
         data: { session },
@@ -55,66 +76,105 @@
       });
       console.log('session', session);
 
-      if (error) throw error;
+      if (error) {
+        console.log('Signup error:', error);
+        
+        // Handle specific error cases
+        if (error.message?.includes('already registered') || error.message?.includes('already exists') || error.message?.includes('User already registered')) {
+          errorType = 'warning';
+          submitError = `An account with this email already exists. Please try logging in instead.`;
+        } else if (error.message?.includes('invalid email')) {
+          errorType = 'error';
+          submitError = 'Please enter a valid email address.';
+        } else if (error.message?.includes('password')) {
+          errorType = 'error';
+          submitError = 'Password must be at least 6 characters long.';
+        } else {
+          errorType = 'error';
+          submitError = error.message || 'An error occurred during signup. Please try again.';
+        }
+        loading = false;
+        return;
+      }
 
       const { user: authUser } = session || {};
       if (!authUser) {
-        throw 'Error creating user';
+        throw new Error('Error creating user account');
       }
 
-      if (!$currentOrg.id) return;
+      console.log('Signup successful, user:', authUser);
 
-      const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
-      const response = await fetch('https://api.ipregistry.co/?key=tryout');
-      const metadata = await response.json();
+      // Check if this is an organization site
+      if ($globalStore.isOrgSite && $currentOrg.id) {
+        const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
+        const response = await fetch('https://api.ipregistry.co/?key=tryout');
+        const metadata = await response.json();
 
-      const profileRes = await supabase
-        .from('profile')
-        .insert({
-          id: authUser.id,
-          username: regexUsernameMatch[1] + `${new Date().getTime()}`,
-          fullname: regexUsernameMatch[1],
+        const profileRes = await supabase
+          .from('profile')
+          .insert({
+            id: authUser.id,
+            username: regexUsernameMatch[1] + `${new Date().getTime()}`,
+            fullname: regexUsernameMatch[1],
+            email: authUser.email,
+            metadata,
+            is_email_verified: true, // Since confirmations are disabled
+            verified_at: new Date().toISOString()
+          })
+          .select();
+        console.log('profileRes', profileRes);
+
+        if (profileRes.error) {
+          throw profileRes.error;
+        }
+
+        // Setting profile
+        console.log('setting profile', profileRes.data[0]);
+        profile.set(profileRes.data[0]);
+
+        capturePosthogEvent('user_signed_up', {
+          distinct_id: $profile.id || '',
           email: authUser.email,
+          username: regexUsernameMatch[1],
           metadata
-        })
-        .select();
-      console.log('profileRes', profileRes);
+        });
 
-      if (profileRes.error) {
-        throw profileRes.error;
-      }
-
-      // Setting profile
-      console.log('setting profile', profileRes.data[0]);
-      profile.set(profileRes.data[0]);
-
-      capturePosthogEvent('user_signed_up', {
-        distinct_id: $profile.id || '',
-        email: authUser.email,
-        username: regexUsernameMatch[1],
-        metadata
-      });
-
-      if ($globalStore.isOrgSite) {
         capturePosthogEvent('student_signed_up', {
           distinct_id: $profile.id || '',
           email: authUser.email,
           username: regexUsernameMatch[1],
           metadata
         });
-      }
 
-      if (redirect) {
-        goto(redirect);
+        // Show success message and redirect
+        showSuccessMessage = true;
+        successMessage = `🎉 Welcome to ${orgName}! Your account has been created successfully. You can now log in.`;
+        
+        // Redirect after a short delay
+        setTimeout(() => {
+          if (redirect) {
+            goto(redirect);
+          } else {
+            goto('/login');
+          }
+        }, 3000);
       } else {
-        goto('/login');
+        // For non-org sites, show success and redirect to login
+        showSuccessMessage = true;
+        successMessage = '🎉 Account created successfully! You can now log in with your credentials.';
+        
+        setTimeout(() => {
+          goto('/login');
+        }, 3000);
       }
 
       formRef?.reset();
       success = true;
       fields = Object.assign({}, SIGNUP_FIELDS);
     } catch (error: any) {
-      submitError = error?.error_description || error?.message;
+      console.error('Signup error:', error);
+      errorType = 'error';
+      submitError = error?.error_description || error?.message || 'An unexpected error occurred. Please try again.';
       loading = false;
     }
   }
@@ -124,26 +184,28 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join {orgName}</title>
 </svelte:head>
 
 <SenjaEmbed id="aa054658-1e15-4d00-8920-91f424326c4e" />
 
-<AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} bind:formRef>
+<AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} bind:formRef orgName={orgName} orgLogo={orgLogo}>
   <div class="mt-4 w-full">
-    <p class="mb-6 text-lg font-semibold dark:text-white">Create a free account</p>
-    <!-- <TextField
-      label="Full Name"
-      bind:value={fields.name}
-      type="text"
-      autoFocus={true}
-      placeholder="e.g Joke Silva"
-      className="mb-6"
-      inputClassName="w-full"
-      isDisabled={loading}
-      errorMessage={errors.name}
-      isRequired
-    /> -->
+    <p class="mb-6 text-lg font-semibold dark:text-white">Create your account</p>
+    
+    <SuccessMessage 
+      bind:message={successMessage}
+      title="Account Created!"
+      on:dismiss={dismissSuccess}
+    />
+    
+    <AuthError 
+      bind:error={submitError}
+      type={errorType}
+      showSignup={false}
+      on:dismiss={dismissError}
+    />
+    
     <TextField
       label={$t('login.fields.email')}
       bind:value={fields.email}
@@ -159,7 +221,7 @@
       label={$t('login.fields.password')}
       bind:value={fields.password}
       type="password"
-      placeholder="************"
+      placeholder="Create a strong password"
       className="mb-6"
       inputClassName="w-full"
       isDisabled={loading}
@@ -171,16 +233,13 @@
       label={$t('login.fields.confirm_password')}
       bind:value={fields.confirmPassword}
       type="password"
-      placeholder="************"
+      placeholder="Confirm your password"
       className="mb-6"
       inputClassName="w-full"
       isDisabled={loading}
       errorMessage={errors.confirmPassword}
       isRequired
     />
-    {#if submitError}
-      <p class="text-sm text-red-500">{submitError}</p>
-    {/if}
   </div>
 
   <div class="my-4 flex w-full items-center justify-end">

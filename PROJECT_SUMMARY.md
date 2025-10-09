@@ -157,3 +157,31 @@ After every fix, update, improvement, feature addition, or any change in the rep
 - Fixed security issue where users from different organizations could still access unauthorized orgs
 - Significantly improved user experience with better error messages and visual feedback
 - Enhanced debugging capabilities for authentication issues
+
+### 2024-12-19 - Organization Branding Fix After Logout
+
+**Commit:** `0d1d8a2f - fix: preserve organization branding on login page after logout`
+
+#### Issue Resolved
+
+- **Problem**: Login page showed generic "ClassroomIO" branding instead of organization name (e.g., "Deutsch Lernen") after logout
+- **Root Cause**: Logout process cleared organization store data, but login page wasn't using server-side layout data properly
+
+#### Solution Implemented
+
+- **Data Priority Fix**: Updated login page to prioritize layout server data over store data for organization context
+- **AuthUI Enhancement**: Added `orgName` and `orgLogo` props to AuthUI component for better organization branding
+- **Debug Logging**: Added comprehensive logging to track organization data flow and identify issues
+
+#### Technical Changes
+
+- Modified `apps/dashboard/src/routes/login/+page.svelte` to use layout data as primary source
+- Enhanced `apps/dashboard/src/lib/components/AuthUI/index.svelte` to accept organization props
+- Improved organization data flow: `layout data (server-side) > store data > fallback`
+
+#### Impact
+
+- Organization branding now persists correctly after logout
+- Login page properly displays organization name and logo regardless of logout state
+- Better debugging capabilities for organization context issues
+- Improved user experience with consistent branding across authentication flows

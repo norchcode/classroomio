@@ -2,7 +2,7 @@
   import AuthUI from '$lib/components/AuthUI/index.svelte';
   import TextField from '$lib/components/Form/TextField.svelte';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
-  import LoginError from '$lib/components/ErrorMessage/LoginError.svelte';
+  import AuthError from '$lib/components/ErrorMessage/AuthError.svelte';
   import { LOGIN_FIELDS } from '$lib/utils/constants/authentication';
   import { getSupabase } from '$lib/utils/functions/supabase';
   import { t } from '$lib/utils/functions/translations';
@@ -165,9 +165,11 @@
       isDisabled={loading}
       errorMessage={$t(errors.password)}
     />
-    <LoginError 
+    <AuthError 
       bind:error={submitError} 
       type={errorType} 
+      showForgotPassword={true}
+      showSignup={true}
       on:dismiss={dismissError}
     />
     <div class="w-full text-right">
