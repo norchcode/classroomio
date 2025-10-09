@@ -209,10 +209,19 @@ export async function getProfile({
               const host = window.location.host;
               const domainParts = host.split('.');
               if (domainParts.length >= 2) {
-                // Construct subdomain URL: {orgSiteName}.{restOfDomain}
-                const mainDomain = domainParts.slice(-2).join('.'); // e.g., "codeplanet.qzz.io"
-                const properOrgUrl = `https://${orgRes.currentOrg.siteName}.${mainDomain}/lms`;
-                window.location.replace(properOrgUrl);
+                // For domains like {orgname}.app.{maindomain}, we need to preserve the app subdomain
+                // Check if we have an app subdomain structure
+                if (domainParts.length >= 3 && domainParts[domainParts.length - 3] === 'app') {
+                  // Structure is {orgname}.app.{maindomain}
+                  const mainDomain = domainParts.slice(-2).join('.'); // e.g., "codeplanet.qzz.io"
+                  const properOrgUrl = `https://${orgRes.currentOrg.siteName}.app.${mainDomain}/lms`;
+                  window.location.replace(properOrgUrl);
+                } else {
+                  // Structure is {orgname}.{maindomain}
+                  const mainDomain = domainParts.slice(-2).join('.'); // e.g., "codeplanet.qzz.io"
+                  const properOrgUrl = `https://${orgRes.currentOrg.siteName}.${mainDomain}/lms`;
+                  window.location.replace(properOrgUrl);
+                }
               } else {
                 // Fallback to /lms if we can't construct the proper URL
                 goto('/lms');
