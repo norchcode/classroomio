@@ -35,11 +35,20 @@
       console.log('data', data);
       if (error) throw error;
 
-      capturePosthogEvent('login', {
-        email: fields.email
-      });
-
+      // If this is an organization site, check if the user belongs to this organization
       if ($globalStore.isOrgSite) {
+        const { data: orgMembershipData, error: orgMembershipError } = await supabase
+          .from('organizationmember')
+          .select('id')
+          .eq('profile_id', data.user.id)
+          .eq('organization_id', $currentOrg.id)
+          .single();
+          
+        if (orgMembershipError || !orgMembershipData) {
+          // User is authenticated but doesn't belong to this organization
+          throw new Error('Invalid email or password');
+        }
+        
         capturePosthogEvent('student_login', {
           email: fields.email
         });
@@ -57,6 +66,10 @@
           throw new Error('Invalid email or password');
         }
       }
+      
+      capturePosthogEvent('login', {
+        email: fields.email
+      });
     } catch (error: any) {
       submitError = error.error_description || error.message;
       loading = false;
