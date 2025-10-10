@@ -12,6 +12,11 @@ export const config = {
       loader: async () => (await import('../translations/en.json')).default
     },
     {
+      locale: 'id',
+      key: '',
+      loader: async () => (await import('../translations/id.json')).default
+    },
+    {
       locale: 'hi',
       key: '',
       loader: async () => (await import('../translations/hi.json')).default

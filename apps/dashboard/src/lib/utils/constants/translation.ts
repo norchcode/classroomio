@@ -6,6 +6,7 @@ export const LANGUAGE = {
   [LOCALE.ES]: 'Spanish',
   [LOCALE.FR]: 'French',
   [LOCALE.HI]: 'Hindi',
+  [LOCALE.ID]: 'Indonesian',
   [LOCALE.PL]: 'Polish',
   [LOCALE.PT]: 'Portuguese',
   [LOCALE.RU]: 'Russian',
