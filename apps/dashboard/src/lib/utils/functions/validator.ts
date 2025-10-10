@@ -22,86 +22,94 @@ const getSiteNameValidation = () =>
 const getNewsfeedValidation = () =>
   z.string().min(5, { message: `${t.get('validations.news_feed.min_char')}` });
 
-const lessonSchema = z.object({
-  title: z.string().nonempty({ message: `${t.get('validations.lesson_schema.empty_title')}` }),
-  lesson_at: z.string().optional(),
-  call_url: z.string().nullable().optional(),
-  is_unlocked: z.boolean().optional()
-});
+const getLessonSchema = () =>
+  z.object({
+    title: z.string().nonempty({ message: `${t.get('validations.lesson_schema.empty_title')}` }),
+    lesson_at: z.string().optional(),
+    call_url: z.string().nullable().optional(),
+    is_unlocked: z.boolean().optional()
+  });
 
-const createQuizValidationSchema = z.object({
-  title: z.string().min(6, {
-    message: 'Must be 6 or more characters long',
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  })
-});
+const getCreateQuizValidationSchema = () =>
+  z.object({
+    title: z.string().min(6, {
+      message: 'Must be 6 or more characters long',
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    })
+  });
 
-const askCommunityValidationSchema = z.object({
-  title: z.string().min(6, {
-    message: `${t.get('validations.ask_community.title.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  }),
-  body: z.string().min(20, {
-    message: `${t.get('validations.ask_community.body.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  }),
-  courseId: z.string().min(36, {
-    message: `${t.get('validations.ask_community.course_id.select_course')}`,
-    invalid_type_error: `${t.get('validations.ask_community.course_id.select_course')}`
-  })
-});
-const commentInCommunityValidationSchema = z.object({
-  comment: z.string().min(6, {
-    message: `${t.get('validations.comment_in_community.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  })
-});
+const getAskCommunityValidationSchema = () =>
+  z.object({
+    title: z.string().min(6, {
+      message: `${t.get('validations.ask_community.title.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    }),
+    body: z.string().min(20, {
+      message: `${t.get('validations.ask_community.body.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    }),
+    courseId: z.string().min(36, {
+      message: `${t.get('validations.ask_community.course_id.select_course')}`,
+      invalid_type_error: `${t.get('validations.ask_community.course_id.select_course')}`
+    })
+  });
+const getCommentInCommunityValidationSchema = () =>
+  z.object({
+    comment: z.string().min(6, {
+      message: `${t.get('validations.comment_in_community.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    })
+  });
 
-const orgLandingpageValidationSchema = z.object({
-  name: z.string().min(6, {
-    message: `${t.get('validations.org_landing_page.name.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  }),
-  email: z.string().email({
-    message: `${t.get('validations.org_landing_page.email.invalid_email')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  }),
-  phone: z.string().min(6, {
-    message: `${t.get('validations.org_landing_page.phone.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  }),
-  message: z.string().min(20, {
-    message: `${t.get('validations.org_landing_page.message.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  })
-});
+const getOrgLandingpageValidationSchema = () =>
+  z.object({
+    name: z.string().min(6, {
+      message: `${t.get('validations.org_landing_page.name.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    }),
+    email: z.string().email({
+      message: `${t.get('validations.org_landing_page.email.invalid_email')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    }),
+    phone: z.string().min(6, {
+      message: `${t.get('validations.org_landing_page.phone.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    }),
+    message: z.string().min(20, {
+      message: `${t.get('validations.org_landing_page.message.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    })
+  });
 
-const forgotValidationSchema = z.object({
-  email: z.string().email({
-    message: `${t.get('validations.forgot.invalid_email')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  })
-});
+const getForgotValidationSchema = () =>
+  z.object({
+    email: z.string().email({
+      message: `${t.get('validations.forgot.invalid_email')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    })
+  });
 
-const authValidationSchema = z.object({
-  email: z.string().email({
-    message: 'validations.auth.email.invalid_email',
-    invalid_type_error: 'validations.invalid_type_error'
-  }),
-  password: z.string().min(6, {
-    message: 'validations.auth.password.min_char',
-    invalid_type_error: 'validations.invalid_type_error'
-  })
-});
+const getAuthValidationSchema = () =>
+  z.object({
+    email: z.string().email({
+      message: 'validations.auth.email.invalid_email',
+      invalid_type_error: 'validations.invalid_type_error'
+    }),
+    password: z.string().min(6, {
+      message: 'validations.auth.password.min_char',
+      invalid_type_error: 'validations.invalid_type_error'
+    })
+  });
 
-const resetValidationSchema = z.object({
-  password: z.string().min(6, {
-    message: `${t.get('validations.reset.password.min_char')}`,
-    invalid_type_error: `${t.get('validations.invalid_type_error')}`
-  })
-});
+const getResetValidationSchema = () =>
+  z.object({
+    password: z.string().min(6, {
+      message: `${t.get('validations.reset.password.min_char')}`,
+      invalid_type_error: `${t.get('validations.invalid_type_error')}`
+    })
+  });
 
-const onboardingValidationSchema = {
+const getOnboardingValidationSchema = () => ({
   stepOne: z.object({
     fullname: z
       .string()
@@ -123,7 +131,7 @@ const onboardingValidationSchema = {
       })
       .min(1)
   })
-};
+});
 
 const saveCertificateSchema = z.object({
   description: z.string().max(200, 'course.navItem.certificates.description_error'),
@@ -178,12 +186,12 @@ export const processErrors = (error, mapToId?: boolean) => {
 };
 
 export const authValidation = (fields = {}) => {
-  const { error } = authValidationSchema.safeParse(fields);
+  const { error } = getAuthValidationSchema().safeParse(fields);
   return processErrors(error);
 };
 
 export const lessonValidation = (lesson = {}) => {
-  const { error } = lessonSchema.safeParse(lesson);
+  const { error } = getLessonSchema().safeParse(lesson);
   return processErrors(error);
 };
 
@@ -204,26 +212,26 @@ export const coursePaymentValidation = (fields = {}) => {
 };
 
 export const resetValidation = (fields = {}) => {
-  const { error } = resetValidationSchema.safeParse(fields);
+  const { error } = getResetValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
 
 export const forgotValidation = (fields = {}) => {
-  const { error } = forgotValidationSchema.safeParse(fields);
+  const { error } = getForgotValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
 
 export const orgLandingpageValidation = (fields = {}) => {
-  const { error } = orgLandingpageValidationSchema.safeParse(fields);
+  const { error } = getOrgLandingpageValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
 
 export const onboardingValidation = (fields = {}, step) => {
-  const schema =
-    step === 1 ? onboardingValidationSchema.stepOne : onboardingValidationSchema.stepTwo;
+  const onboardingSchemas = getOnboardingValidationSchema();
+  const schema = step === 1 ? onboardingSchemas.stepOne : onboardingSchemas.stepTwo;
   const { error } = schema.safeParse(fields);
 
   return processErrors(error);
@@ -304,19 +312,19 @@ export const updateProfileEmailValidation = (email) => {
 };
 
 export const createQuizValidation = (fields = {}) => {
-  const { error } = createQuizValidationSchema.safeParse(fields);
+  const { error } = getCreateQuizValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
 
 export const askCommunityValidation = (fields = {}) => {
-  const { error } = askCommunityValidationSchema.safeParse(fields);
+  const { error } = getAskCommunityValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
 
 export const commentInCommunityValidation = (fields = {}) => {
-  const { error } = commentInCommunityValidationSchema.safeParse(fields);
+  const { error } = getCommentInCommunityValidationSchema().safeParse(fields);
 
   return processErrors(error);
 };
