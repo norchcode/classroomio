@@ -1,1638 +1,1559 @@
 {
-  "verify_email_modal": {
-    "heading": "Verify your Email",
-    "sent_verification": "We've sent a verification email to",
-    "to_confirm": "to confirm the validity of the email provided.",
-    "loading": "Loading...",
-    "resend": "Resend Verification Code",
-    "resend_in": "Resend verification in",
-    "seconds": "seconds",
-    "snackbar_error": "error while sending code"
-  },
-
-  "delete_modal": {
-    "label": "Delete",
-    "content": "Are you sure?",
-    "no": "No",
-    "yes": "Yes"
-  },
-
-  "onboarding": {
-    "sell": "Sell courses online",
-    "teach": "Teach my current students online",
-    "expanding": "On another platform, expanding here",
-    "employees": "Train my employees",
-    "customers": "Create courses for my customers",
-    "explore": "Just here to explore",
-    "articles": "Articles",
-    "search": "Search engine",
-    "social": "Social media",
-    "friends": "Friends and family",
-    "fullname": "Full Name",
-    "name": "Name of Organization",
-    "organisation_sitename": "Organisation Site name",
-    "what_brings": "What brings you to",
-    "how": "How did you hear about us?",
-    "back": "Back",
-    "continue": "Continue"
-  },
-
-  "welcome_modal": {
-    "we_at": "We at",
-    "small_team": "are a small team with a large mission to empower educators with great software to help them make an impact in people's lives. Education is the most powerful gift you can give anyone, and it makes perfect sense to provide you with all the tools you need to give this GIFT to more people.",
-    "thank_you": "Thank you for choosing us",
-    "deeply_appreciate": "we deeply appreciate it and are at your service."
-  },
-
-  "login": {
-    "welcome": "Welcome back",
-    "email": "Your email",
-    "password": "Your password",
-    "forgot": "Forgot password?",
-    "login": "Log In",
-    "login_with": "or login with",
-    "signup_with": "or sign up with",
-    "already_have_account": "Already have an account?",
-    "not_registered_yet": "Not registered yet?",
-    "signup": "Sign up",
-    "signup_with_google": "Sign up with Google",
-    "login_with_google": "Login with Google",
-    "create_to_join": "Create a free account to join",
-    "create_account": "Create Account",
-    "login_to_join": "Log in to join",
-    "fields": {
-      "email": "Your Email",
-      "full_name": "Full Name",
-      "password": "Your Password",
-      "confirm_password": "Confirm Password",
-      "password_helper_message": "Password must be more than 6 characters",
-      "create_account": "Create Account"
-    },
-    "validation": {
-      "unable_to_create_profile": "Unable to create profile",
-      "user_cannot_be_created": "User cannot be created"
+  "common": {
+    "unsaved_changes": {
+      "message": "Anda memiliki perubahan yang belum disimpan. Apakah Anda yakin ingin keluar?"
     }
   },
-  "profileMenu": {
-    "profile": "PROFILE",
-    "current_org": "CURRENT ORGANIZATION",
-    "free_tools": "FREE TOOLS",
-    "progress": "Progress report",
-    "timer": "Activity timer",
-    "tic_tac": "Tictac toe",
-    "see_more": "See more",
-
-    "whats_new": "What's new",
-    "launch_week": "Launch week"
-  },
-  "settings": {
-    "heading": "Settings",
-    "subheadings": {
-      "view_site": "View site"
-    },
-    "tabs": {
-      "profile_tab": "Profile",
-      "organization_tab": "Organization",
-      "landing_page_tab": "Landing Page",
-      "billing_tab": "Billing",
-      "integrations_tab": "Integrations",
-      "language_tab": "Language"
-    },
-    "profile": {
-      "profile_picture": {
-        "heading": "Profile Picture",
-        "upload_image": "Upload Image",
-        "file_size": "Max file size:",
-        "accepted": "Accepted:",
-        "validation_error": "File size exceeds the maximum limit:"
-      },
-      "personal_information": {
-        "heading": "Personal Information",
-        "full_name": "Full Name",
-        "username": "Username",
-        "email": "Email"
-      },
-      "update_profile": "Update Profile",
-      "logout": "Log out"
-    },
-    "organization": {
-      "organization_profile": {
-        "heading": "Organization Profile",
-        "organization_name": "Organization Name",
-        "upload_image": "Upload Image",
-        "update_organization": "Update Organization",
-        "theme": {
-          "heading": "Theme",
-          "sub_heading": "Set your brand color",
-          "custom_theme": "Custom Theme",
-          "add_theme": "Add Theme"
-        },
-        "customize_lms": {
-          "heading": "Customize LMS",
-          "sub_heading": "Personalize Your Organization LMS",
-          "body": "Control your students learning experience. You can enable or disable tabs and pages, update LMS banner and in-app comments to your organization requirements",
-          "button": "Customize LMS"
-        },
-        "custom_domain": {
-          "heading": "Custom Domain",
-          "sub_heading": "Customise your Domain",
-          "body": "Create a custom URL so your audience can get to your organization easily",
-          "button": "Edit domain"
-        },
-        "team": {
-          "heading": "Team",
-          "sub_heading": "Set up your team",
-          "body": "Add team mates to your organization so you can both collaborate on projects.",
-          "button": "Manage Team"
-        }
-      }
-    },
-    "landing_page": {
-      "heading": "Landing Page",
-      "show_section": "Show Section",
-      "hide_section": "Hide Section",
-      "title": "Title",
-      "title_highlight": "Title-Highlight",
-      "subtitle": "Subtitle",
-      "background": {
-        "title": "Background Image",
-        "show_background": "Show background",
-        "hide_background": "Hide background"
-      },
-      "actions": {
-        "heading": "Actions",
-        "label": "Label",
-        "link": "Link",
-        "no_redirect": "No redirect",
-        "redirect": "Redirect",
-        "banner_type": {
-          "heading": "Banner Type",
-          "video": "Video",
-          "image": "Image"
-        },
-
-        "show_banner": "Show banner",
-        "hide_banner": "Hide banner"
-      },
-      "about": {
-        "heading": "About",
-        "title": "Title",
-        "content": "Content",
-        "upload_an_image": "Upload an image",
-        "select_image": "Select Image"
-      },
-      "courses": {
-        "heading": "Courses",
-        "show_section": "Show Section",
-        "hide_section": "Hide Section",
-        "title": "Title",
-        "title_highlight": "Title-Highlight",
-        "subtitle": "Subtitle"
-      },
-      "faq": {
-        "heading": "Frequently Asked Questions",
-        "show_section": "Show Section",
-        "hide_section": "Hide Section",
-        "title": "Title",
-        "question": "Question",
-        "answer": "Answer",
-        "button": "Add New Faq",
-        "save": "Save",
-        "cancel": "Cancel"
-      },
-      "contact_us": {
-        "heading": "Contact us",
-        "show_section": "Show Section",
-        "hide_section": "Hide Section",
-        "title": "Title",
-        "title_highlight": "Title-Highlight",
-        "subtitle": "Subtitle",
-        "phone_number": "Phone Number",
-        "email": "Email"
-      },
-      "mailing_list": {
-        "heading": "Mailing List",
-        "show_section": "Show Section",
-        "hide_section": "Hide Section",
-        "title": "Title",
-        "subtitle": "Subtitle",
-        "button_label": "Button-label"
-      },
-      "footer": {
-        "heading": "Footer",
-        "show_section": "Show Section",
-        "hide_section": "Hide Section",
-        "facebook": "Facebook",
-        "twitter": "Twitter",
-        "linkedin": "LinkedIn"
-      },
-      "save_changes": "Save Changes"
-    },
-    "integrations": {
-      "heading": "Telegram",
-      "sub_heading": "Connect your account to telegram to get notified of any change within the application.",
-      "step_authenticate": "Step 1: Authenticate your account via the ClassroomIO bot.",
-      "open_bot_button": "Open Bot",
-      "step_chatId": "Step 2: Enter the Chat ID given to you by the bot.",
-      "connect_button": "Connect",
-      "success_message": "Integration Successful",
-      "disconnect": "Disconnect"
-    },
-    "billing": {
-      "sub_title": "Billing details",
-      "manage": "Manage your billing",
-      "active": "You don't have any active billing",
-      "provider": "We use Polar to help manage your billing",
-      "open_billing": "Open billing",
-      "error": "An error occurred while opening billing"
-    }
-  },
-
-  "org_navigation": {
-    "dashboard": "Dashboard",
-    "courses": "Courses",
-    "community": "Community",
-    "audience": "Audience",
-    "setup": "Setup",
-    "help": "Help",
-    "settings": "Settings",
-    "early_adopter": "Become an Early Adopter",
-    "unlock": "Unlock unlimited features and invest in our future",
-    "upgrade": "Upgrade Now"
-  },
-
-  "pricing": {
-    "plan_names": {
-      "free": "Free",
-      "early": "Early Adopter",
-      "enterprise": "Enterprise"
-    },
-    "modal": {
-      "heading": "Upgrade Plan",
-      "thanks": "Thank you for your support",
-      "plan": "Your plan comes with cool perks and benefits including access to all future features we release.",
-      "save": "Save 2 months",
-      "close": "Close",
-      "learn": "Learn more",
-      "month": "month",
-      "monthly": "Monthly",
-      "annually": "Annually"
-    }
-  },
-
-  "setup": {
-    "get_started": "Get Started",
-    "personal_profile": {
-      "title": "Upload a profile picture and update username",
-      "desc": "Personalize and add a human touch making interactions more personal and memorable",
-      "button_label": "Update Profile"
-    },
-    "organization_profile": {
-      "title": "Update organisation profile picture",
-      "desc": "Establish a professional and recognizable identity for your organization",
-      "button_label": "Update Org Profile"
-    },
-    "course": {
-      "title": "Create Course",
-      "desc": "Create a course that you will share with your students",
-      "button_label": "Create Course"
-    },
-    "lesson": {
-      "title": "Create a lesson",
-      "desc": "Break your course into lesson that your students can easily understand",
-      "button_label": "Create Lesson"
-    },
-    "exercise": {
-      "title": "Create an exercise",
-      "desc": "Test your students allow them to demonstarte their understanding of the subject matter",
-      "button_label": "Create Assignment"
-    },
-    "publish_course": {
-      "title": "Publish a course",
-      "desc": "Make your course public and purchaseable",
-      "button_label": "Publish Course"
-    }
-  },
-
-  "add_org": {
-    "create_org": "Create Organization",
-    "name": "Name of Organization",
-    "org_sitename": "Organisation Site name",
-    "create": "Create",
-    "sitename": "Sitename already exists",
-    "error_organization": "Something went wrong while creating this organization. Please reload and try again"
-  },
-
-  "navigation": {
-    "goto": "Go to",
-    "courses": "Courses",
-    "home": "Home",
-    "classroomio_home": "ClassroomIO Home",
-    "dashboard": "Dashboard",
-    "discussion": "Discussion",
-    "people": "People",
-    "goto_lms": "Go to LMS",
-    "goto_home": "Go to ClassroomIO Home",
-    "login": "Login",
-    "signup": "Sign Up",
-    "redirecting": "Redirecting",
-    "loading_state": "Taking you to the next page, please wait.",
-    "org_loading_state": "Taking you to your organization...",
-    "add_organization": "+ Add Organization"
-  },
-
-  "markdown_editor": {
-    "write": "Write",
-    "preview": "Preview"
-  },
-
-  "components": {
-    "quiz": {
-      "title": "Quizzes",
-      "second": "Second(s)",
-      "answer": "Answer(s)",
-      "question_delete": "Delete Question",
-      "add_more": "+ Add more answers",
-      "remove_last": "- Remove last answer",
-      "quiz_delete": "Delete Quiz",
-      "delete_question": "Are you sure you want to delete this question?",
-      "delete_quiz": "Are you sure you want to delete this quiz?",
-      "lose_content": "You will lose your content and this action can’t be undone.",
-      "delete": "Delete",
-      "update": "Update",
-      "create": "Create",
-      "a_quiz": "a Quiz",
-      "quiz_title": "Quiz Title",
-      "placeholder": "Your quiz title",
-      "save": "Save Change",
-      "continue": "Continue",
-      "rename": "Rename",
-      "updated": "Updated",
-      "start": "Start Quiz",
-      "start_typing": "Start typing your question",
-      "required_field": "This field is required",
-      "type_answer": "Type answer",
-      "label": "Please enter a label",
-      "no_quizz": "No Quiz Created",
-      "interactive": "Create interactive quizzes with scoreboard for your students."
-    },
-    "settings": {
-      "domains": {
-        "title": "Custom domain",
-        "add": "Add",
-        "url": "URL",
-        "update": "Update Domain",
-        "custom": "Custom domain",
-        "domain": "Add your own domain name",
-        "save": "Save",
-        "your_domain": "Your Domain",
-        "custom_domain_error": "You can't add a top level domain as custom domain. Instead, use a subdomain like 'courses.[yourwebsite].com' or 'www.[yourwebsite].com'.",
-        "custom_domain_not_classroomio": "Domain cannot contain the main platform domain",
-        "custom_domain_success": "Custom domain added successfully",
-        "dns_description": "Set the following record on your DNS provider to continue:",
-        "dns_type": "Type",
-        "dns_value": "Value",
-        "dns_name": "Name",
-        "refresh": "Refresh",
-        "remove": "Remove",
-        "custom_favicon": "Custom favicon",
-        "custom_code": "Custom code"
-      },
-      "customize_lms": {
-        "title": "Customize LMS",
-        "disabled": "Disabled",
-        "enabled": "Enabled",
-        "save": "Save Changes",
-        "dashboard": {
-          "title": "Dashboard",
-          "community": "Community",
-          "exercises": "Exercises",
-          "banner_image": "Banner Image",
-          "banner_image_btn": "Update banner image",
-          "banner_text": "Banner Text",
-          "banner_text_label": "Update banner text",
-          "banner_text_placeholder": "Write the text here"
-        },
-        "course": {
-          "title": "Course",
-          "newsfeed": "Newsfeed",
-          "grading": "Grading"
-        },
-        "apps": {
-          "title": "Apps",
-          "poll": "Poll",
-          "live_comment": "Live comments"
-        }
-      }
-    }
-  },
-
-  "schedule": {
-    "title": "Your Schedule",
-    "essence": "The essence of design collaboration",
-    "figma": "Figma Introduction",
-    "join": "Join Call",
-    "no": "No Lesson on this day"
-  },
-
-  "dashboard": {
-    "morning_heading": "Good Morning",
-    "afternoon_heading": "Good Afternoon",
-    "evening_heading": "Good Evening",
-    "create_course": "Create Course",
-    "view_site": "View Site",
-    "visit_site": "Visit Website",
-    "current_lesson": "Currently Learning",
-    "your_progress": "Your Progress",
-    "continue": "Continue",
-    "no_courses": "No courses in progress yet",
-    "start_course": "Once you start a course, your progress will reflect here",
-    "lms_dashboard_hero": "Today is another day to bring you closer to your learning goals. Don’t give up, the more you learn the better you get.",
-    "dont": "Don't give up",
-    "lessons_completed": "Lessons completed",
-    "no_courses_started": "No courses started",
-    "revenue": "Revenue",
-    "revenue_description": "Approximate revenue made from course sales",
-    "no_of_courses": "Number of courses",
-    "no_courses_description": "Courses created within this organization",
-    "total_students": "Total students",
-    "total_students_description": "Based on student enrollments",
-    "top_courses": "Top Courses",
-    "students": "students",
-    "student": "student",
-    "completion": "completion",
-    "create_first_course": "Create Your First Course",
-    "create_first_course_description": "Start creating courses to track course progress",
-    "recent_enrollments": "Recent Enrollments",
-    "publish_first_course": "Publish Your First Course",
-    "publish_first_course_description": "To track enrollments, publish a course and invite students",
-    "publish_course": "Publish Course"
-  },
-
-  "ai": {
-    "help_me": "Help me write",
-    "placeholder": "Help me write a short description",
-    "text": "Start typing...",
-    "reset": "Reset",
-    "rephrase": "Rephrase",
-    "insert": "Insert",
-    "can_you": "Can you please rephrase this"
-  },
-
-  "courses": {
-    "heading": "Courses",
-    "heading_button": "Create Course",
-    "search_placeholder": "Find Course",
-    "course_filter": {
-      "date_created": "Date Created",
-      "published": "Published",
-      "lessons": "Lessons"
-    },
-    "course_card": {
-      "empty_title": "No Courses Created",
-      "empty_description": "Share your knowledge with the world by creating engaging courses for your students.",
-      "context_menu": {
-        "clone": "Clone",
-        "share": "Share",
-        "invite": "Invite",
-        "delete": "Delete"
-      },
-      "error_message": "An error occurred.",
-      "lessons_number": "lessons",
-      "students": "students",
-      "published": "Published",
-      "unpublished": "Unpublished",
-      "continue_course": "Continue Course",
-      "learn_more": "Learn more",
-      "list_view": {
-        "title": "Title",
-        "description": "Description",
-        "lessons": "Lessons",
-        "students": "Students",
-        "published": "Published",
-        "type": "Type"
-      }
-    },
-    "new_course_modal": {
-      "heading": "Create a Course",
-      "course_name": "Course name",
-      "type": "Course type",
-      "course_name_placeholder": "Your course name",
-      "short_description": "Short Description",
-      "short_description_placeholder": "A little description about this course",
-      "type_selector_title": "What type of course are you looking at?",
-      "button": "Finish",
-      "back": "Back",
-      "next": "Next"
-    }
-  },
-
-  "course": {
-    "navItems": {
-      "nav_news_feed": "News Feed",
-      "nav_content": "Content",
-      "nav_attendance": "Attendance",
-      "nav_submissions": "Submissions",
-      "nav_marks": "Marks",
-      "nav_people": "People",
-      "nav_analytics": "Analytics",
-      "nav_certificates": "Certificates",
-      "nav_landing_page": "Landing Page",
-      "nav_settings": "Settings"
-    },
-
-    "navItem": {
-      "news_feed": {
-        "heading": "News Feed",
-        "heading_button": {
-          "title": "Add",
-          "edit_post": "Edit Post",
-          "make_a_post": "Make a Post",
-          "placeholder": "Share an update with your students",
-          "cancel": "Cancel",
-          "post": "Post"
-        },
-        "body_header": "No post yet",
-        "body_content": "Make a post to your class. Start by clicking on the Add button.",
-        "pinned": "Pinned",
-        "snackbar": {
-          "comment_deleted": "Comment Deleted",
-          "reaction_error": "An error occurred while reacting to news feed",
-          "comment_creation_error": "An error occurred while creating comment",
-          "add_comment_success": "Comment added",
-          "toggle_pin_error": "Failed to toggle pinned feed",
-          "unpinned": "Unpinned",
-          "successfully": "Successfully",
-          "feed_delete_success": "Feed deleted successfully",
-          "fetch_feed_fail": "Failed to fetch news feeds",
-          "fetching_error": "An error occured while fetching feed"
-        }
-      },
-
-      "lessons": {
-        "heading": "Lessons",
-        "heading_v2": "Content",
-        "drag": "drag a card to reorder",
-        "no_lesson": "No lessons yet",
-        "share_your_knowledge": "Share your knowledge with the world by creating engaging lessons. Start by clicking on the Add button.",
-        "section_prompt": {
-          "cta": "Enable Sections",
-          "header": "Enable Sections",
-          "title": "We Launched Course Sections",
-          "description": "You can now group lessons into sections to organize your content and make learning smoother for your students.",
-          "activate": "Activate",
-          "cancel": "Cancel"
-        },
-        "add_lesson": {
-          "button_title": "Add",
-          "start_reorder": "Reorder",
-          "end_reorder": "End Reorder",
-          "modal_heading": "Add New Lesson",
-          "modal_heading_section": "Add New Section",
-          "lesson_title": "Lesson Title",
-          "lesson_section_title": "Section Title",
-          "click_to": "Click to",
-          "lock": "Lock",
-          "unlock": "Unlock",
-          "fullname": "fullname",
-          "save": "Save",
-          "edit": "Edit",
-          "delete": "Delete",
-          "cancel": "Cancel"
-        },
-        "join_lesson": "Join lesson",
-        "no_link": "No link",
-        "no_tutor": "No tutor added",
-        "body_header": "No lessons yet",
-        "body_content": "Share your knowledge with the world by creating engaging lessons. Start by clicking on the Add button.",
-
-        "lesson_nav": {
-          "materials": "Materials",
-          "exercises": "Exercises"
-        },
-        "download_pdf": "Download PDF",
-        "autosaving": "Autosaving...",
-        "done": "Done",
-        "edit": "Edit",
-        "mark_as": "Mark as",
-        "incomplete": "Incomplete",
-        "complete": "Complete",
-        "next": "Next",
-        "prev": "Prev",
-        "materials": {
-          "body_heading": "No note, video or slide added for this lesson yet",
-          "body_content": "Share your knowledge with your students by creating engaging content. Start by clicking on",
-          "get_started": "Get Started",
-          "no_translation": "No translation for the selected language",
-          "button": "button",
-          "tabs": {
-            "note": {
-              "title": "Note",
-              "placeholder": "Write your lesson note here",
-              "ai": {
-                "outline": "Generate Lesson Outline",
-                "note": "Generate Lesson Note",
-                "activities": "Generate Lesson Activities"
-              }
-            },
-            "slide": {
-              "title": "Slide",
-              "slide_link": "Slide Link",
-              "helper_message": "You can embed Google Slides or Canva Presentation"
-            },
-            "video": {
-              "title": "Video",
-              "embed_link": "Embed Link",
-              "upload": "Upload",
-              "button": "Add/Edit Video(s)",
-              "add_video": {
-                "title": "Add a Video",
-                "add_by": "Add By",
-                "youtube_link": "Youtube Link",
-                "videos_added": "Videos Added",
-                "add_video": "Add Video",
-                "upload_video": "Upload Video",
-                "select_file": "Select file( Mp4, MOV, AVI) to upload to your lesson.",
-                "size": "(Max 500 MB)",
-                "oops": "Oops `😬, couldn’t upload video",
-                "big_file": "Sorry we video wasn’t uploaded. The file size is too big,",
-                "maximum_size": "maximum size is 30 MB. Try again!",
-                "button": "Try another file",
-                "try_again": "Please try again",
-                "unsupported_format": "Sorry we video wasn’t uploaded, the file format isn’t supported or something went wrong on the server.",
-                "format": "Upload MP4, MOV and AVI files.",
-                "upgrade": "Upgrade your plan to upload vidoes",
-                "uploading": "Uploading...",
-                "invalid_youtube": "Invalid YouTube link(s)",
-                "invalid_link": "Invalid link(s)",
-                "cancel_upload": "Cancel Upload",
-                "upload_cancelled": "Upload cancelled by user"
-              }
-            },
-            "document": {
-              "title": "Docs",
-              "add_document": "Add Document",
-              "no_document": "No documents uploaded yet",
-              "view_document": "View Document",
-              "download": "Download",
-              "upload_document": "Upload Document",
-              "upload_title": "Upload Document",
-              "upload_description": "Upload PDF, DOCX, or DOC files. Maximum size: 5MB",
-              "drag_drop": "Drag and drop your document here",
-              "or": "or",
-              "choose_file": "Choose File",
-              "cancel": "Cancel",
-              "uploading": "Uploading...",
-              "upload_success": "Document uploaded successfully!",
-              "upload_error": "Failed to upload document",
-              "file_type_error": "File type not supported. Please upload PDF, DOCX, or DOC files.",
-              "file_size_error": "File size too large. Maximum size is {size}.",
-              "type": "Type",
-              "size": "Size",
-              "upload_error_title": "Upload Error",
-              "upload_error_message": "Unsupported file format or upload failed",
-              "upload_error_try_again": "Please try again with a valid document file",
-              "try_again": "Try Again",
-              "upgrade": "Upgrade your plan to upload documents",
-
-              "cancel_upload": "Cancel Upload",
-              "upload_cancelled": "Upload cancelled by user",
-              "downloading": "Downloading...",
-              "view_pdf": "View PDF",
-              "delete": "Delete",
-              "page_of": "Page {page} of {total}",
-              "loading_pdf": "Loading PDF...",
-              "failed_to_load_pdf": "Failed to load PDF document",
-              "failed_to_render_pdf": "Failed to render PDF page",
-              "use_arrow_keys": "Use arrow keys to navigate, +/- to zoom, or click the controls above. Right-click is disabled."
-            }
-          },
-          "button_done": "Done"
-        },
-
-        "exercises": {
-          "heading": "All Exercises",
-          "add_button": "Add",
-          "no_exercises": "No exercises added for this lesson",
-          "no_assigned_exercises": "Your tutor hasn't assigned any exercise to this lesson. For the main time, you can",
-          "chill": "chill with the big boys",
-          "add_exercise": "Share your knowledge with the world by creating engaging exercises. Add an exercise now.",
-          "new_exercise_modal": {
-            "heading": "New Exercise",
-            "options": {
-              "from_scratch": "From Scratch",
-              "from_scratch_subtitle": "Create your exercise from scratch if you have your questions already prepared",
-              "use_template": "Use a Template",
-              "use_template_subtitle": "Select from 100+ templates of predefined exercise to help you get started",
-              "use_ai": "Use AI",
-              "use_ai_subtitle": "You can generate an exercise with AI from your notes"
-            },
-            "how": "How do you want to create your exercise",
-            "coming_soon": "Coming soon",
-            "next": "Next",
-            "title": "Give your exercise a title",
-            "title_placeholder": "Exercise name",
-            "finish": "Finish",
-            "select_template": "Select a template",
-            "questions": "Questions",
-            "points": "Points",
-            "back": "Back",
-            "create_exercises": "Create exercises from Notes with AI",
-            "choose_questions": "Choose how many questions and options you want and AI will help you create an exercise out of your note. Let's go.",
-            "how_many_questions": "How many questions do you want to create?",
-            "how_many_options": "How many options per questions do you want?",
-            "add_note": "Please add a note to use this feature",
-            "generate": "Generate",
-            "completion": "AI Generation Complete",
-            "click_generate": "Click 'Generate' for some magic"
-          },
-          "all_exercises": {
-            "heading": "All Exercise",
-            "questions": "Questions",
-            "submissions": "Submissions",
-            "save": "Save",
-            "preview": "Preview",
-            "reorder": "Reorder Questions",
-            "delete_exercise": "Delete Exercise",
-            "order_questions": "Order questions",
-            "write_your_answer": "Write your answer",
-            "write_your_answer_here": "Write your answer here",
-            "no_answer": "No answer was provided",
-            "write_your_question_here": "Write your question here",
-            "write_your_title": "Write your title here",
-            "write_your_subtitle": "Write your subtitle here",
-            "highlight": "Write your title highlight here",
-            "content": "Write your Content here",
-            "video": "Write your video link here",
-            "link": "Write your link here",
-            "label": "Write your label here",
-            "email": "Write your email here",
-            "facebook": "Write your Facebook link here",
-            "twitter": "Write your Twitter link here",
-            "linkedin": "Write your LinkedIn link here",
-            "number": "Write your phone number here",
-            "previous": "Previous",
-            "finish": "Finish",
-            "next": "Next",
-            "check": "Check",
-            "description": {
-              "title": "Title",
-              "heading": "Description",
-              "describe": "Describe the exercise to your student",
-              "no": "No description"
-            },
-            "delete_confirmation": {
-              "title": "Delete question",
-              "sure": "Are you sure you want to delete this question",
-              "no": "No, please don't",
-              "yes": "Yes, delete"
-            },
-            "edit_mode": {
-              "delete_modal": "Delete Exercise",
-              "sure": "Are you sure you want to delete this exercise?",
-              "no": "No, cancel",
-              "yes": "Yes, delete",
-              "deleting": "Deleting...",
-              "error": "You have some errors",
-              "question": "Question",
-              "write": "Write your code",
-              "option": "Add option",
-              "question_types": {
-                "single": "Single answer",
-                "multiple": "Multiple answers",
-                "paragraph": "Paragraph"
-              }
-            },
-            "view_mode": {
-              "no_question": "No question added for this exercise",
-              "edit": "Edit",
-              "button": "button to add",
-              "questions": "questions",
-              "points": "points",
-              "all": "All required",
-              "due": "Due by",
-              "no_description": "No description",
-              "start": "Start",
-              "graded": "Graded",
-              "pending": "Pending",
-              "submitted": "Submitted",
-              "status_pending": "Status: Pending Review",
-              "status_graded": "Status: Review Completed",
-              "status_submitted": "Status: Submitted"
-            },
-            "analytics": {
-              "summary": {
-                "heading": "Summary",
-                "question_chart": "Question Charts"
-              },
-              "individual": {
-                "heading": "Individual",
-                "answers": "Individual Answers",
-                "no": "No answer was provided"
-              },
-              "submissions": "Submissions"
-            }
-          }
-        },
-        "disabled": "Feature is disabled",
-        "comments": {
-          "title": "Comments",
-          "you": "You",
-          "text_area_title": "Leave a comment",
-          "placeholder": "What do you think about this lesson?",
-          "comment_btn": "Comment",
-          "cancel_btn": "Cancel",
-          "load_more_btn": "Load more"
-        },
-
-        "polls": {
-          "title": "Poll",
-          "active_polls": "Active Polls",
-          "expired_polls": "Expired Polls",
-          "loading": "Loading...",
-          "no_polls": "No polls to display"
-        },
-
-        "poll": {
-          "voted": "Voted",
-          "created_by": "Created by",
-          "status": "Status",
-          "draft": "Draft",
-          "publish": "Publish",
-          "expiration": "Expiration",
-          "total_voted": "Total Votes",
-          "responses": "Responses",
-          "expires": "Expires",
-          "today": "Today",
-          "back": "Back",
-          "result": "Result",
-          "delete": "Delete",
-          "create_poll": "Create poll",
-          "question": "Question",
-          "options": "Options",
-          "option_label": "Option Label",
-          "cancel": "Cancel",
-          "poll_question": "Poll Question"
-        },
-        "version_history": {
-          "title": "Version history",
-          "fetch_more_versions": "Fetch more versions",
-          "current_version": "Current version",
-          "restore_version": "Restore this version"
-        }
-      },
-
-      "attendance": {
-        "title": "Attendance",
-        "present": "Present",
-        "absent": "Absent",
-        "search_students": "Search Students",
-        "student": "Student",
-        "lesson": "Lesson",
-        "no_student": "No Student Added"
-      },
-
-      "submissions": {
-        "title": "Submitted Exercises",
-        "submission_status": {
-          "submitted": "Submitted",
-          "in_progress": "In Progress",
-          "graded": "Graded"
-        },
-        "grading_modal": {
-          "details": "Details",
-          "early": "Early",
-          "late": "Late",
-          "total_grade": "Total grade",
-          "student": "Student",
-          "status": "Status",
-          "add_comment": "Add comment",
-          "add_comment_placeholder": "Leave a comment",
-          "grade_with_ai": "Grade with AI",
-          "submit_grades": "Submit Grades",
-          "accept_grade": "Accept",
-          "reject_grade": "Reject",
-          "allocated": "Allocated this score because",
-          "total_try": "of total tries:",
-          "options_correct": "correct options were selected",
-          "out_of": "out of",
-          "options_wrong": "and the number of wrong selections were",
-          "questions_tried": "Allocated this score because of total tries:",
-          "delete_prompt": "Delete",
-          "delete_error": "Failed to delete submission",
-          "delete_success": "Successfully deleted submission"
-        }
-      },
-
-      "marks": {
-        "title": "Marks",
-        "student": "Student",
-        "total": "Total",
-        "export": {
-          "csv": "Export as CSV",
-          "pdf": "Export as PDF"
-        },
-        "no_student": "No Student Added"
-      },
-
-      "people": {
-        "title": "People",
-        "add": "Add",
-        "search": "Search people",
-        "you": "You",
-        "pending": "Pending",
-        "name": "Name",
-        "role": "Role",
-        "action": "Action",
-        "feedback": "Copied Email to clipboard",
-        "view": "View",
-        "delete_profile": "Delete profile",
-        "invite_modal": {
-          "title": "Invite people",
-          "invite": "Invite Tutors",
-          "select": "Select tutors in organization...",
-          "to_add": "To add tutor to your organization,",
-          "go_to": "go to organization settings",
-          "invite_students": "Invite Students",
-          "via_link": "You can invite students via an invite link",
-          "via_qr": "You can invite students via QR",
-          "download_qr": "Download QR code",
-          "qr_downloading_snackbar": "QR code generated successfully, please wait while it downloads",
-          "copy_link": "Copy link",
-          "success": "Copied Successfully",
-          "finish": "Finish"
-        },
-        "delete_confirmation": {
-          "title": "Delete",
-          "sure": "Are you sure you want to delete",
-          "no": "No",
-          "yes": "Yes"
-        },
-        "roles": {
-          "admin": "Admin",
-          "tutor": "Tutor",
-          "student": "Student",
-          "filter": "Filter"
-        },
-        "teams": {
-          "add": "Add",
-          "add_team": "Add your team mates or collaborators to your organization. Start working together",
-          "invite": "Invite",
-          "placeholder": "email comma separated",
-          "role": "Role",
-          "send_invite": "Send Invite",
-          "members": "Members",
-          "invite_sent": "Invite Sent",
-          "you": "You",
-          "remove": "Remove"
-        }
-      },
-
-      "certificates": {
-        "title": "Certificates",
-        "certificate_settings": "Certificate Settings",
-        "theme": "Choose a theme",
-        "logo": "Brand Logo",
-        "to_update": "To update your brand image, go to",
-        "settings": "Settings > Organisation settings",
-        "and_upload": "and upload your brand logo",
-        "goto_settings": "Go to Settings",
-        "description": "Course Description",
-        "placeholder": "a little description about the course",
-        "allow": "Allow students download certificate",
-        "locked": "Locked",
-        "unlocked": "Unlocked",
-        "save": "Save Changes",
-        "unlocked_certificate": "Congrats! 🎉 your certificate is ready",
-        "unlocked_certificate_subtitle": "You have completed this course, and your dedication is evident. Download certificate and share with your network as a prove of your newly acquired skill",
-        "locked_certificate": "Certificates not available",
-        "instructor_unlock": "Your instructor needs to unlock your certificate.",
-        "contact_instructor": "If you need your certificate, please contact your instructor.",
-        "download_certificate": "Download Certificate",
-        "complete_to_download_title": "Course not complete 😔",
-        "complete_to_download_subtitle": "Your certificate will be available once you complete all lesson and exercises in this course",
-        "description_error": "Description cannot exceed 200 characters",
-        "characters": "characters",
-        "unexpected_error": "An unexpected error occurred"
-      },
-
-      "landing_page": {
-        "editor": {
-          "title": {
-            "header": "Header",
-            "requirement": "Requirement",
-            "description": "Description",
-            "goals": "Goals",
-            "reviews": "Reviews",
-            "instructor": "Instructor",
-            "pricing": "Pricing",
-            "certificate": "Certificate"
-          },
-
-          "save": "Save",
-          "page_builder": "Page Builder",
-          "section": "section",
-          "display_section": "Display section",
-
-          "header_form": {
-            "title": "Title",
-            "description": "Description",
-            "short_video": "Short Video",
-            "replace_cover": "Replace cover image",
-            "replace": "Replace",
-            "helper": "Enter a link to a youtube video"
-          },
-
-          "reviews_form": {
-            "add_reviews": "Add Reviews",
-            "fullname": "Full Name",
-            "description": "Description",
-            "rating": "Rating",
-            "hide": "Hide Review",
-            "validations": {
-              "invalid_type_error": "Must not be empty",
-              "name": {
-                "min_char": "Name is too short, min of 5 character"
-              },
-              "avatar_url": {
-                "message": "Upload an image"
-              },
-              "rating": {
-                "message": "Rating must be from 1-5"
-              },
-              "description": {
-                "min_char": "'Description is too short, min of 5 characters"
-              }
-            }
-          },
-
-          "certificate_form": {
-            "upload_template": "Certificate template"
-          },
-
-          "instructor_form": {
-            "upload": "Instructor Logo",
-            "name": "Instructor name",
-            "name_placeholder": "Your company name",
-            "role": "Instructor Role",
-            "about": "About Instructor",
-            "about_placeholder": "A short background about the instructure",
-            "total": "Total number of courses"
-          },
-
-          "pricing_form": {
-            "currency": "Currency",
-            "cost": "Cost",
-            "payment": "Payment Link",
-            "discount": "Discount",
-            "no": "No",
-            "yes": "Yes",
-            "percent": "Discount Percent",
-            "gift": "About Gift"
-          }
-        },
-
-        "upload_widget": {
-          "title": "Banner Widget",
-          "width": "Images wider than 1500 pixels work best.",
-          "size": "The maximum size per file is 500kb.",
-          "submit": "Submit",
-          "no_images": "No images available."
-        },
-
-        "pricing_section": {
-          "free": "Free",
-          "not_accepting": "This course is currently not accepting new students.",
-          "discount": "Discount",
-          "enroll": "Enroll Now",
-          "buy": "Buy Now",
-          "bird": "Early bird offer. Buy ASAP"
-        },
-
-        "course_content": "Course content",
-        "modules": "modules",
-        "lessons": "lessons",
-        "exercises": "exercises",
-        "start_course": "Start Course",
-        "requirement": "Requirement",
-        "description": "Course Description",
-        "learn": "What you'll learn",
-        "certificate": "Certificate",
-        "certificate_text": "When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network.",
-        "content": "Course Content",
-        "slide": "1 slide",
-        "note": "note",
-        "video": "video",
-        "reviews": "Reviews",
-        "see_all": "See All",
-        "header_video": "Header video",
-        "no_course_published": "No Course Published",
-        "coming_your_way": "We've got great courses coming your way, stay tuned!!!",
-        "view_less": "View Less",
-        "view_all": "View All",
-        "thank_you": "Thank you for dropping a message, we will get back to you shortly",
-        "name": "Your Name",
-        "email": "Your Email",
-        "phone": "Your Phone",
-        "message": "Your Message",
-        "your_message": "Your message here",
-        "submit": "Submit",
-        "successful_sub": "You have been added successfully. Thanks for subscribing.",
-        "enter": "Enter your email...",
-        "powered_by": "Powered by",
-        "landing_page": "Landing Page",
-        "explore": "Explore courses",
-        "find": "Find courses you will love from best teachers all over the world",
-        "find_course": "Find a course...",
-
-        "reviews_modal": {
-          "title": "Reviews",
-          "rating": "Rating",
-          "ratings": "Ratings"
-        },
-        "instructor": "Instructor",
-        "courses": "courses"
-      },
-
-      "analytics": {
-        "title": "Analytics"
-      },
-
-      "settings": {
-        "heading": "Settings",
-        "cover_image": "Cover Image",
-        "optional_image": "This optional image will show up on your welcome page. If you include one, it should be at least 280 x 200",
-        "replace": "Replace",
-        "del": "Delete",
-        "course_details": "Course Details",
-        "course_title": "Course title",
-        "course_description": "Course Description",
-        "placeholder": "Write your course description here",
-        "link": "Course Link",
-        "grading": "Grading",
-        "reports": "Make grading reports available for lessons",
-        "disabled": "Disabled",
-        "enabled": "Enabled",
-        "order": "Order Lessons Tab",
-        "drag": "Drag and drop the labels to re-order your material tabs",
-        "lesson_download": "Lessons DownLoad",
-        "available": "Make the Lesson available for Download in pdf for registered students",
-        "course_download": "Course Downlaod",
-        "course_avail": "Make the Course available for Download for registered students",
-        "download": "Download",
-        "allow": "Allow New Students",
-        "access": "Allow new students to access this course",
-        "publish": "Publish Course",
-        "determines": "This determines if your course displays on your landing page",
-        "published": "Published",
-        "unpublished": "Unpublished",
-        "type": "Course type",
-        "course_type_desc": "Update the course type for a more personalized experience",
-        "live_class": "Live class",
-        "self_paced": "Self paced",
-        "delete": "Delete Course",
-        "delete_text": "Delete this course,this action cannot be undone",
-        "save": "Save Changes"
-      }
-    },
-
-    "not_permitted": {
-      "header": "No Permission",
-      "body": "Unfortunately you don't have access to this course.",
-      "button": "Go home"
-    }
-  },
-
-  "community": {
-    "title": "Community",
-    "ask_button": "Ask Community",
-    "ask": {
-      "go_back": "Go Back",
-      "ask_the": "Ask the community",
-      "publish": "Publish",
-      "title": "Title",
-      "select_course": "Select Course",
-      "ask_community": "Ask the community any question you might have",
-      "question": "Question",
-      "save": "Save",
-      "edit": "Edit",
-      "cancel": "Cancel",
-      "give": "Give an answer",
-      "comment": "Comment"
-    },
-    "find_question": "Find Question",
-    "asked": "asked",
-    "answers": "answers",
-    "no_question": "No Questions asked",
-    "ask_a_question": "Ask a question to the community",
-    "delete": {
-      "title": "Delete",
-      "question": "question",
-      "comment": "comment",
-      "sure": "Are you sure you want to delete this",
-      "no": "No, keep it",
-      "yes": "Yes, delete"
-    },
-    "all": "All"
-  },
-
-  "audience": {
-    "title": "Audience",
-    "export": "Export",
-    "no_audience": "No audience to manage",
-    "manage": "Manage all your students here and stay connected with them",
-    "name": "Name",
-    "email": "Email",
-    "date_joined": "Date Joined",
-    "upgrade": "Upgrade your plan to invite more students"
-  },
-
-  "analytics": {
-    "courses": "Courses",
-    "progress": "Progress",
-    "progress_description": "{value, number} of {total, number} complete",
-    "incomplete": "Incomplete",
-    "completed": "Completed",
-    "complete": "complete",
-    "last_seen": "Last seen",
-    "a_while_ago": "a while ago",
-    "exercises": "Exercises",
-    "graded": "Graded",
-    "not_graded": "Not Graded",
-    "enrolled_courses": "Enrolled Courses",
-    "enrolled_courses_description": "All enrolled courses",
-    "overall_course_progress": "Overall Course Progress",
-    "overall_course_progress_description": "Percentage of completed lessons",
-    "total_average_grade": "Total Average Grade",
-    "total_average_grade_description": "Based on exercise grades across all course",
-    "overall_course_progress_user_description": "Based on lesson completion",
-    "assignment_completion": "Assignment Completion",
-    "assignment_completion_description": "Percentage of completed assignments",
-    "average_grade_description": "Average grade of all completed assignments",
-    "students": "Students",
-    "lessons": "Lessons",
-    "tutors": "tutors",
-    "avg_grade": "Avg grade",
-    "completion_rate": "Completion rate",
-    "student_progress_overview": "Student Progress Overview",
-    "student_name": "Student Name",
-    "lessons_completed": "Lessons Completed",
-    "exercises_submitted": "Exercises Submitted",
-    "average_grade": "Average Grade",
-    "actions": "Actions",
-    "view_details": "View Details",
-    "no_students_found": "No Students Found",
-    "no_students_description": "There are no students enrolled in this course yet. Students will appear here once they join the course.",
-    "showing_students": "Showing {start} to {end} of {total} students",
-    "no_analytics_data": "No Analytics Data",
-    "no_analytics_description": "Unable to load analytics data for this course. Please try again later or contact support if the issue persists."
-  },
-
-  "upgrade": {
-    "certificate": "Upgrade your plan to generate certificates",
-    "team": "Upgrade your plan to add team members",
-    "domain": "Upgrade your plan to add custom domains",
-    "team_members": "Team members",
-    "back": "Back to Settings",
-    "download_lessons": "Upgrade to download lessons",
-    "download_course": "Upgrade to download course"
-  },
-
-  "lms_navigation": {
-    "home": "Home",
-    "my_learning": "My Learning",
-    "exercise": "Exercise",
-    "community": "Community",
-    "explore": "Explore",
-    "help": "Help",
-    "settings": "Settings"
-  },
-
-  "my_learning": {
-    "heading": "My Learning",
-    "progress": "In progress",
-    "complete": "Complete",
-    "search": "Search courses",
-    "not_in_progress": "No Course In progress",
-    "any_progress": "Any course that you start will be displayed here",
-    "not_completed": "No Course Completed",
-    "any_course": "Any course that you complete will be displayed here"
-  },
-
-  "exercises": {
-    "heading": "Exercises",
-    "not_submitted": "Not Submitted",
-    "submitted": "Submitted",
-    "in_progress": "Grading In Progress",
-    "graded": "Graded",
-    "lesson": "Lesson"
-  },
-
-  "explore": {
-    "heading": "Explore our courses",
-    "empty_heading": "No course available",
-    "empty_description": "There are currently no published course available"
-  },
-
-  "snackbar": {
-    "success": "Success",
-    "success_update": "Updated successfully",
-    "success_delete": "Deleted successfully",
-    "something": "Something went wrong - Please try later",
-    "update": "Update",
-
-    "poll": {
-      "error": {
-        "creating_poll": "An error occurred while creating poll",
-        "updating_poll": "An error occurred while updating poll status",
-        "submitting_poll": "An error occurred while submitting poll"
-      },
-      "info": {
-        "not_published": "Poll is not published yet",
-        "vote_once": "You can only vote once"
-      }
-    },
-
-    "exercise": {
-      "success": "Saved Successfully",
-      "submission_updated": "Submission updated to",
-      "error_fetching": "Fetching exercises failed, please reload the page"
-    },
-
-    "materials": {
-      "apology": "We apologise, there was an error saving your lesson.",
-      "update_translations": "Updating translations failed",
-      "creating_new": "Creating new translations failed"
-    },
-
-    "newsfeed": {
-      "success": {
-        "edit": "Feed edited successfully",
-        "add": "New feed added successfully"
-      },
-      "error": {
-        "error": "An error occurred while",
-        "editing": "editing feed",
-        "creating": "creating feed"
-      }
-    },
-
-    "people": {
-      "error": {
-        "missing_data": "Org data missing, please reload the page",
-        "no": "No current org domain"
-      },
-      "success": {
-        "copied": "Copied to clipboard"
-      }
-    },
-
-    "course_settings": {
-      "success": {
-        "download": "Download Complete",
-        "saved": "Saved successfully",
-        "successful_integration": "Integration successful",
-        "successful_deletion": "Integration deleted",
-        "update_successful": "Update successful"
-      },
-      "error": {
-        "not_right": "Something's not right - Please try later",
-        "went_wrong": "Something went wrong - Please try later",
-        "title": "title cannot be empty",
-        "description": "description cannot be empty",
-        "failed_integration": "Integration Failed, please try again later",
-        "failed_deletion": "Deletion Failed, please try again later"
-      }
-    },
-
-    "lms": {
-      "error": {
-        "username_exists": "username already exists",
-        "update": "Update failed:",
-        "try_again": "Please try again"
-      }
-    },
-
-    "team_members": {
-      "invite_sent": "Invite Sent!",
-      "user_exists": "User Already Exists",
-      "invite_fail": "Failed to send invite, please try again",
-      "remove_fail": "Failed to remove user, please try again"
-    },
-
-    "landing_page_settings": {
-      "error": {
-        "file_size": "File Size must not be greater than 500kb",
-        "try_again": "Try Again",
-        "label": "Upload Image",
-        "fetch_error": "Error fetching images from Unsplash"
-      },
-      "success": {
-        "complete": "Complete :)"
-      }
-    },
-
-    "course": {
-      "success": {
-        "comment_deleted": "Comment Deleted",
-        "comment_added": "Comment added",
-        "pinned": "Pinned",
-        "unpinned": "Unpinned",
-        "successfully": "Successfully",
-        "feed_delete_success": "Feed deleted successfully"
-      },
-      "error": {
-        "reaction_error": "An error occurred while reacting to news feed",
-        "commenting_error": "An error occurred while creating comment",
-        "toggle_error": "Failed to toggle pinned feed",
-        "news_feed_fail": "Failed to fetch news feeds",
-        "feed_fetch_error": "An error occured while fetching feed"
-      }
-    },
-
-    "attendance": {
-      "error": {
-        "reload": "Something isn't right.  Please reload and take attendance again"
-      }
-    },
-
-    "lessons": {
-      "success": {
-        "complete_marked": "Marked as complete",
-        "complete_download": "Download Complete",
-        "version_restored": "Version restored sucessfully"
-      },
-      "error": {
-        "try_later": "Something's not right - Please try later",
-        "exercise_not_complete": "Complete all exercises to mark as complete"
-      }
-    },
-
-    "marks": {
-      "error": "Error fetching marks"
-    },
-
-    "submissions": {
-      "success": {
-        "grading": "Grading saved and student notified"
-      }
-    },
-
-    "invite": {
-      "failed_join": "Joining failed, please contact your admin"
-    },
-
-    "community": {
-      "error": {
-        "try_again": "Error - Please try again later",
-        "deleting_comments": "Error deleting comments",
-        "deleting_question": "Error deleting question"
-      },
-
-      "success": {
-        "comment_submitted": "Comment Submitted!",
-        "success_delete": "Deleted successfully",
-        "question_submitted": "Question Submitted!"
-      }
-    },
-
-    "signup": {
-      "disposable": "The email you provided is disposable"
-    },
-
-    "upgrade": {
-      "generate_fail": "Failed to generate success",
-      "failed": "Failed, please try again later"
-    },
-
-    "setup": {
-      "info_lesson": "You Need to Create a lesson",
-      "info_course": "You need to create a course"
-    },
-
-    "generic": {
-      "success_delete": "Deleted successfully",
-      "try_again": "Error - Please try again later"
-    }
-  },
-
-  "specialization": {
-    "course_tag": "Specialization"
-  },
-
-  "content": {
-    "heading": "Internationalization in SvelteKit",
-    "toggle_label": "Select Preferred Language"
-  },
-
-  "generic": {
-    "locked": "Locked",
-    "unlocked": "Unlocked",
-    "loading": "Loading"
-  },
-
   "validations": {
-    "user_profile": {
-      "email": "Invalid email address",
-      "username": "Username cannot be empty",
-      "fullname": "Name should be minimum of 5 characters"
+    "invalid_type_error": "Tidak boleh kosong",
+    "email": {
+      "not_valid": "Bukan email yang valid"
     },
-    "organization_name": {
-      "min_char": "Organization must contain 5 or more characters",
-      "hyphen_rule": "Organization name cannot start or end with a hyphen"
-    },
-    "site_name": {
-      "min_char": "Site name must contain 5 or more characters",
-      "hyphen_rule": "Site name cannot start or end with a hyphen"
-    },
-    "news_feed": {
-      "min_char": "Field must contain 5 or more characters"
-    },
-    "lesson_schema": {
-      "empty_title": "Title cannot be empty"
-    },
-    "create_quiz": {
-      "min_char": "Must be 6 or more characters long"
-    },
-    "ask_community": {
-      "title": {
-        "min_char": "Must be 6 or more characters long"
+    "course_payment": {
+      "email": {
+        "invalid_email": "Alamat email tidak valid"
       },
-      "body": {
-        "min_char": "Must be 10 or more characters long"
-      },
-      "course_id": {
-        "select_course": "Select a Course"
+      "full_name": {
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
       }
     },
-    "comment_in_community": {
-      "min_char": "Must be 6 or more characters long"
+    "confirm_password": {
+      "not_match": "Tidak cocok dengan kata sandi"
     },
-    "org_landing_page": {
-      "name": {
-        "min_char": "Must be 6 or more characters long"
+    "onboarding": {
+      "step_two": {
+        "source": {
+          "required": "Pilih sebuah opsi"
+        },
+        "goal": {
+          "required": "Pilih sebuah opsi"
+        }
       },
-      "email": {
-        "invalid_email": "Invalid email address"
-      },
-      "phone": {
-        "min_char": "Must be 6 or more characters long"
-      },
-      "message": {
-        "min_char": "Must be 10 or more characters long"
-      }
-    },
-    "forgot": {
-      "invalid_email": "Invalid email address"
-    },
-    "auth": {
-      "email": {
-        "invalid_email": "Invalid email address"
-      },
-      "password": {
-        "min_char": "Must be 6 or more characters long"
+      "step_one": {
+        "full_name": {
+          "min_char": "Nama lengkap harus berisi 5 karakter atau lebih"
+        }
       }
     },
     "reset": {
       "password": {
-        "min_char": "Must be 6 or more characters long"
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
       }
     },
-    "onboarding": {
-      "step_one": {
-        "full_name": {
-          "min_char": "Fullname must contain 5 or more characters"
-        }
-      },
-      "step_two": {
-        "goal": {
-          "required": "Select an option"
-        },
-        "source": {
-          "required": "Select an option"
-        }
-      }
-    },
-    "confirm_password": {
-      "not_match": "Does not match password"
-    },
-    "course_payment": {
-      "full_name": {
-        "min_char": "Must be 6 or more characters long"
+    "auth": {
+      "password": {
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
       },
       "email": {
-        "invalid_email": "Invalid email address"
+        "invalid_email": "Alamat email tidak valid"
       }
     },
-    "email": {
-      "not_valid": "Not valid email"
+    "forgot": {
+      "invalid_email": "Alamat email tidak valid"
     },
-    "invalid_type_error": "Must not be empty"
-  },
-
-  "common": {
-    "unsaved_changes": {
-      "message": "You have unsaved changes. Are you sure you want to leave?"
+    "org_landing_page": {
+      "message": {
+        "min_char": "Panjangnya harus 10 karakter atau lebih"
+      },
+      "phone": {
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
+      },
+      "email": {
+        "invalid_email": "Alamat email tidak valid"
+      },
+      "name": {
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
+      }
+    },
+    "comment_in_community": {
+      "min_char": "Panjangnya harus 6 karakter atau lebih"
+    },
+    "ask_community": {
+      "course_id": {
+        "select_course": "Pilih Kursus"
+      },
+      "body": {
+        "min_char": "Panjangnya harus 10 karakter atau lebih"
+      },
+      "title": {
+        "min_char": "Panjangnya harus 6 karakter atau lebih"
+      }
+    },
+    "create_quiz": {
+      "min_char": "Panjangnya harus 6 karakter atau lebih"
+    },
+    "lesson_schema": {
+      "empty_title": "Judul tidak boleh kosong"
+    },
+    "news_feed": {
+      "min_char": "Bidang harus berisi 5 karakter atau lebih"
+    },
+    "site_name": {
+      "min_char": "Nama situs harus mengandung 5 karakter atau lebih",
+      "hyphen_rule": "Nama situs tidak boleh diawali atau diakhiri dengan tanda hubung"
+    },
+    "organization_name": {
+      "min_char": "Organisasi harus berisi 5 karakter atau lebih",
+      "hyphen_rule": "Nama organisasi tidak boleh diawali atau diakhiri dengan tanda hubung"
+    },
+    "user_profile": {
+      "email": "Alamat email tidak valid",
+      "username": "Nama pengguna tidak boleh kosong",
+      "fullname": "Nama harus minimal 5 karakter"
     }
+  },
+  "generic": {
+    "locked": "Terkunci",
+    "unlocked": "Tidak terkunci",
+    "loading": "Memuat"
+  },
+  "content": {
+    "heading": "Internasionalisasi di SvelteKit",
+    "toggle_label": "Pilih Bahasa Pilihan"
+  },
+  "specialization": {
+    "course_tag": "Spesialisasi"
+  },
+  "snackbar": {
+    "success": "Kesuksesan",
+    "success_update": "Berhasil diperbarui",
+    "success_delete": "Berhasil dihapus",
+    "something": "Ada yang tidak beres - Coba lagi nanti",
+    "update": "Memperbarui",
+    "generic": {
+      "success_delete": "Berhasil dihapus",
+      "try_again": "Kesalahan - Silakan coba lagi nanti"
+    },
+    "setup": {
+      "info_lesson": "Anda Perlu Membuat pelajaran",
+      "info_course": "Anda perlu membuat kursus"
+    },
+    "upgrade": {
+      "generate_fail": "Gagal menghasilkan kesuksesan",
+      "failed": "Gagal, silakan coba lagi nanti"
+    },
+    "signup": {
+      "disposable": "Email yang Anda berikan bersifat sekali pakai"
+    },
+    "community": {
+      "success": {
+        "comment_submitted": "Komentar Dikirim!",
+        "success_delete": "Berhasil dihapus",
+        "question_submitted": "Pertanyaan Dikirim!"
+      },
+      "error": {
+        "try_again": "Kesalahan - Silakan coba lagi nanti",
+        "deleting_comments": "Terjadi kesalahan saat menghapus komentar",
+        "deleting_question": "Terjadi kesalahan saat menghapus pertanyaan"
+      }
+    },
+    "invite": {
+      "failed_join": "Gagal bergabung, harap hubungi admin Anda"
+    },
+    "submissions": {
+      "success": {
+        "grading": "Penilaian disimpan dan siswa diberitahu"
+      }
+    },
+    "marks": {
+      "error": "Terjadi kesalahan saat mengambil tanda"
+    },
+    "lessons": {
+      "error": {
+        "try_later": "Ada yang tidak beres - Silakan coba lagi nanti",
+        "exercise_not_complete": "Selesaikan semua latihan untuk menandai selesai"
+      },
+      "success": {
+        "complete_marked": "Ditandai sebagai selesai",
+        "complete_download": "Unduh Selesai",
+        "version_restored": "Versi berhasil dipulihkan"
+      }
+    },
+    "attendance": {
+      "error": {
+        "reload": "Ada yang tidak beres.  Silakan muat ulang dan ambil kehadiran lagi"
+      }
+    },
+    "course": {
+      "error": {
+        "reaction_error": "Terjadi kesalahan saat bereaksi terhadap umpan berita",
+        "commenting_error": "Terjadi kesalahan saat membuat komentar",
+        "toggle_error": "Gagal mengalihkan feed yang dipasangi pin",
+        "news_feed_fail": "Gagal mengambil feed berita",
+        "feed_fetch_error": "Terjadi error saat mengambil feed"
+      },
+      "success": {
+        "comment_deleted": "Komentar Dihapus",
+        "comment_added": "Komentar ditambahkan",
+        "pinned": "Disematkan",
+        "unpinned": "Dilepas pinnya",
+        "successfully": "Berhasil",
+        "feed_delete_success": "Umpan berhasil dihapus"
+      }
+    },
+    "landing_page_settings": {
+      "success": {
+        "complete": "Menyelesaikan :)"
+      },
+      "error": {
+        "file_size": "Ukuran File tidak boleh lebih besar dari 500kb",
+        "try_again": "Coba Lagi",
+        "label": "Unggah Gambar",
+        "fetch_error": "Terjadi kesalahan saat mengambil gambar dari Unsplash"
+      }
+    },
+    "team_members": {
+      "invite_sent": "Undangan Terkirim!",
+      "user_exists": "Pengguna Sudah Ada",
+      "invite_fail": "Gagal mengirim undangan, coba lagi",
+      "remove_fail": "Gagal menghapus pengguna, coba lagi"
+    },
+    "lms": {
+      "error": {
+        "username_exists": "nama pengguna sudah ada",
+        "update": "Pembaruan gagal:",
+        "try_again": "Silakan coba lagi"
+      }
+    },
+    "course_settings": {
+      "error": {
+        "not_right": "Ada yang tidak beres - Silakan coba lagi nanti",
+        "went_wrong": "Ada yang tidak beres - Coba lagi nanti",
+        "title": "judul tidak boleh kosong",
+        "description": "deskripsi tidak boleh kosong",
+        "failed_integration": "Integrasi Gagal, coba lagi nanti",
+        "failed_deletion": "Penghapusan Gagal, coba lagi nanti"
+      },
+      "success": {
+        "download": "Unduh Selesai",
+        "saved": "Berhasil disimpan",
+        "successful_integration": "Integrasi berhasil",
+        "successful_deletion": "Integrasi dihapus",
+        "update_successful": "Pembaruan berhasil"
+      }
+    },
+    "people": {
+      "success": {
+        "copied": "Disalin ke papan klip"
+      },
+      "error": {
+        "missing_data": "Data organisasi tidak ada, harap muat ulang halaman",
+        "no": "Tidak ada domain organisasi saat ini"
+      }
+    },
+    "newsfeed": {
+      "error": {
+        "error": "Terjadi kesalahan saat",
+        "editing": "mengedit umpan",
+        "creating": "membuat umpan"
+      },
+      "success": {
+        "edit": "Umpan berhasil diedit",
+        "add": "Umpan baru berhasil ditambahkan"
+      }
+    },
+    "materials": {
+      "apology": "Kami mohon maaf, terjadi kesalahan saat menyimpan pelajaran Anda.",
+      "update_translations": "Gagal memperbarui terjemahan",
+      "creating_new": "Gagal membuat terjemahan baru"
+    },
+    "exercise": {
+      "success": "Berhasil Disimpan",
+      "submission_updated": "Pengiriman diperbarui ke",
+      "error_fetching": "Gagal mengambil latihan, harap muat ulang halaman"
+    },
+    "poll": {
+      "info": {
+        "not_published": "Jajak pendapat belum dipublikasikan",
+        "vote_once": "Anda hanya dapat memilih satu kali"
+      },
+      "error": {
+        "creating_poll": "Terjadi kesalahan saat membuat jajak pendapat",
+        "updating_poll": "Terjadi kesalahan saat memperbarui status jajak pendapat",
+        "submitting_poll": "Terjadi kesalahan saat mengirimkan jajak pendapat"
+      }
+    }
+  },
+  "explore": {
+    "heading": "Jelajahi kursus kami",
+    "empty_heading": "Tidak ada kursus yang tersedia",
+    "empty_description": "Saat ini tidak ada kursus yang diterbitkan tersedia"
+  },
+  "exercises": {
+    "heading": "Latihan",
+    "not_submitted": "Tidak Dikirim",
+    "submitted": "Dikirim",
+    "in_progress": "Penilaian Sedang Berlangsung",
+    "graded": "Bertingkat",
+    "lesson": "Pelajaran"
+  },
+  "my_learning": {
+    "heading": "Pembelajaran Saya",
+    "progress": "Sedang berlangsung",
+    "complete": "Menyelesaikan",
+    "search": "Cari kursus",
+    "not_in_progress": "Tidak Ada Kursus yang Sedang Berlangsung",
+    "any_progress": "Kursus apa pun yang Anda mulai akan ditampilkan di sini",
+    "not_completed": "Tidak Ada Kursus yang Selesai",
+    "any_course": "Kursus apa pun yang Anda selesaikan akan ditampilkan di sini"
+  },
+  "lms_navigation": {
+    "home": "Rumah",
+    "my_learning": "Pembelajaran Saya",
+    "exercise": "Latihan",
+    "community": "Masyarakat",
+    "explore": "Mengeksplorasi",
+    "help": "Membantu",
+    "settings": "Pengaturan"
+  },
+  "upgrade": {
+    "certificate": "Tingkatkan rencana Anda untuk menghasilkan sertifikat",
+    "team": "Tingkatkan rencana Anda untuk menambah anggota tim",
+    "domain": "Tingkatkan paket Anda untuk menambahkan domain khusus",
+    "team_members": "Anggota tim",
+    "back": "Kembali ke Pengaturan",
+    "download_lessons": "Tingkatkan untuk mengunduh pelajaran",
+    "download_course": "Tingkatkan untuk mengunduh kursus"
+  },
+  "analytics": {
+    "courses": "Kursus",
+    "progress": "Kemajuan",
+    "progress_description": "{nilai, angka} dari {total, angka} selesai",
+    "incomplete": "Tidak lengkap",
+    "completed": "Selesai",
+    "complete": "menyelesaikan",
+    "last_seen": "Terakhir terlihat",
+    "a_while_ago": "beberapa waktu yang lalu",
+    "exercises": "Latihan",
+    "graded": "Bertingkat",
+    "not_graded": "Tidak Dinilai",
+    "enrolled_courses": "Kursus Terdaftar",
+    "enrolled_courses_description": "Semua kursus yang terdaftar",
+    "overall_course_progress": "Kemajuan Kursus Secara Keseluruhan",
+    "overall_course_progress_description": "Persentase pelajaran yang diselesaikan",
+    "total_average_grade": "Nilai Rata-Rata Total",
+    "total_average_grade_description": "Berdasarkan nilai latihan di semua kursus",
+    "overall_course_progress_user_description": "Berdasarkan penyelesaian pelajaran",
+    "assignment_completion": "Penyelesaian Tugas",
+    "assignment_completion_description": "Persentase tugas yang diselesaikan",
+    "average_grade_description": "Nilai rata-rata dari semua tugas yang diselesaikan",
+    "students": "Siswa",
+    "lessons": "Pelajaran",
+    "tutors": "tutor",
+    "avg_grade": "Nilai rata-rata",
+    "completion_rate": "Tingkat penyelesaian",
+    "student_progress_overview": "Ikhtisar Kemajuan Siswa",
+    "student_name": "Nama Siswa",
+    "lessons_completed": "Pelajaran Selesai",
+    "exercises_submitted": "Latihan Dikirim",
+    "average_grade": "Nilai Rata-Rata",
+    "actions": "Tindakan",
+    "view_details": "Lihat Detail",
+    "no_students_found": "Tidak Ada Siswa yang Ditemukan",
+    "no_students_description": "Belum ada siswa yang terdaftar dalam kursus ini. Siswa akan muncul di sini setelah mereka mengikuti kursus.",
+    "showing_students": "Menampilkan {start} ke {end} dari {total} siswa",
+    "no_analytics_data": "Tidak Ada Data Analisis",
+    "no_analytics_description": "Tidak dapat memuat data analisis untuk kursus ini. Silakan coba lagi nanti atau hubungi dukungan jika masalah terus berlanjut."
+  },
+  "audience": {
+    "title": "Hadirin",
+    "export": "Ekspor",
+    "no_audience": "Tidak ada audiens yang perlu dikelola",
+    "manage": "Kelola semua siswa Anda di sini dan tetap terhubung dengan mereka",
+    "name": "Nama",
+    "email": "E-mail",
+    "date_joined": "Tanggal Bergabung",
+    "upgrade": "Tingkatkan rencana Anda untuk mengundang lebih banyak siswa"
+  },
+  "community": {
+    "title": "Masyarakat",
+    "ask_button": "Tanya Komunitas",
+    "find_question": "Temukan Pertanyaan",
+    "asked": "diminta",
+    "answers": "jawaban",
+    "no_question": "Tidak ada pertanyaan yang diajukan",
+    "ask_a_question": "Ajukan pertanyaan kepada komunitas",
+    "all": "Semua",
+    "delete": {
+      "title": "Menghapus",
+      "question": "pertanyaan",
+      "comment": "komentar",
+      "sure": "Apakah Anda yakin ingin menghapus ini",
+      "no": "Tidak, simpanlah",
+      "yes": "Ya, hapus"
+    },
+    "ask": {
+      "go_back": "Kembali",
+      "ask_the": "Tanyakan pada komunitas",
+      "publish": "Menerbitkan",
+      "title": "Judul",
+      "select_course": "Pilih Kursus",
+      "ask_community": "Ajukan pertanyaan apa pun yang mungkin Anda miliki kepada komunitas",
+      "question": "Pertanyaan",
+      "save": "Menyimpan",
+      "edit": "Sunting",
+      "cancel": "Membatalkan",
+      "give": "Berikan jawaban",
+      "comment": "Komentar"
+    }
+  },
+  "course": {
+    "not_permitted": {
+      "header": "Tidak Ada Izin",
+      "body": "Sayangnya Anda tidak memiliki akses ke kursus ini.",
+      "button": "Pulang"
+    },
+    "navItem": {
+      "settings": {
+        "heading": "Pengaturan",
+        "cover_image": "Gambar Sampul",
+        "optional_image": "Gambar opsional ini akan muncul di halaman selamat datang Anda. Jika Anda menyertakannya, ukurannya minimal harus 280 x 200",
+        "replace": "Mengganti",
+        "del": "Menghapus",
+        "course_details": "Detail Kursus",
+        "course_title": "Judul kursus",
+        "course_description": "Deskripsi Kursus",
+        "placeholder": "Tulis deskripsi kursus Anda di sini",
+        "link": "Tautan Kursus",
+        "grading": "Penilaian",
+        "reports": "Menyediakan laporan penilaian untuk pelajaran",
+        "disabled": "Dengan disabilitas",
+        "enabled": "Diaktifkan",
+        "order": "Tab Pesan Pelajaran",
+        "drag": "Seret dan lepas label untuk menyusun ulang tab materi Anda",
+        "lesson_download": "Unduh Pelajaran",
+        "available": "Jadikan Pelajaran tersedia untuk Diunduh dalam pdf untuk siswa terdaftar",
+        "course_download": "Unduhan Kursus",
+        "course_avail": "Jadikan Kursus tersedia untuk diunduh bagi siswa terdaftar",
+        "download": "Unduh",
+        "allow": "Izinkan Siswa Baru",
+        "access": "Izinkan siswa baru untuk mengakses kursus ini",
+        "publish": "Publikasikan Kursus",
+        "determines": "Ini menentukan apakah kursus Anda ditampilkan di halaman arahan Anda",
+        "published": "Diterbitkan",
+        "unpublished": "Tidak diterbitkan",
+        "type": "Jenis kursus",
+        "course_type_desc": "Perbarui jenis kursus untuk pengalaman yang lebih personal",
+        "live_class": "Kelas langsung",
+        "self_paced": "Berjalan sendiri",
+        "delete": "Hapus Kursus",
+        "delete_text": "Hapus kursus ini, tindakan ini tidak dapat dibatalkan",
+        "save": "Simpan Perubahan"
+      },
+      "analytics": {
+        "title": "Analisis"
+      },
+      "landing_page": {
+        "course_content": "Konten kursus",
+        "modules": "modul",
+        "lessons": "pelajaran",
+        "exercises": "latihan",
+        "start_course": "Mulai Kursus",
+        "requirement": "Persyaratan",
+        "description": "Deskripsi Kursus",
+        "learn": "Apa yang akan Anda pelajari",
+        "certificate": "Sertifikat",
+        "certificate_text": "Saat Anda menyelesaikan semua kursus dalam program ini, Anda akan mendapatkan Sertifikat untuk dibagikan dengan jaringan profesional Anda.",
+        "content": "Konten Kursus",
+        "slide": "1 slide",
+        "note": "catatan",
+        "video": "video",
+        "reviews": "Ulasan",
+        "see_all": "Lihat Semua",
+        "header_video": "Video tajuk",
+        "no_course_published": "Tidak Ada Kursus yang Diterbitkan",
+        "coming_your_way": "Kami punya kursus menarik yang akan Anda ikuti, pantau terus!!!",
+        "view_less": "Lihat Lebih Sedikit",
+        "view_all": "Lihat Semua",
+        "thank_you": "Terima kasih telah mengirimkan pesan, kami akan segera menghubungi Anda kembali",
+        "name": "Nama Anda",
+        "email": "Email Anda",
+        "phone": "Telepon Anda",
+        "message": "Pesan Anda",
+        "your_message": "Pesan Anda di sini",
+        "submit": "Kirim",
+        "successful_sub": "Anda telah berhasil ditambahkan. Terima kasih telah berlangganan.",
+        "enter": "Masukkan email Anda...",
+        "powered_by": "Didukung oleh",
+        "landing_page": "Halaman Arahan",
+        "explore": "Jelajahi kursus",
+        "find": "Temukan kursus yang Anda sukai dari guru-guru terbaik di seluruh dunia",
+        "find_course": "Temukan kursus...",
+        "instructor": "Pengajar",
+        "courses": "kursus",
+        "reviews_modal": {
+          "title": "Ulasan",
+          "rating": "Peringkat",
+          "ratings": "Peringkat"
+        },
+        "pricing_section": {
+          "free": "Bebas",
+          "not_accepting": "Kursus ini saat ini tidak menerima siswa baru.",
+          "discount": "Diskon",
+          "enroll": "Daftar Sekarang",
+          "buy": "Beli Sekarang",
+          "bird": "Penawaran pemesanan awal. Beli secepatnya"
+        },
+        "upload_widget": {
+          "title": "Widget Spanduk",
+          "width": "Gambar yang lebih lebar dari 1500 piksel berfungsi paling baik.",
+          "size": "Ukuran maksimum per file adalah 500kb.",
+          "submit": "Kirim",
+          "no_images": "Tidak ada gambar yang tersedia."
+        },
+        "editor": {
+          "save": "Menyimpan",
+          "page_builder": "Pembuat Halaman",
+          "section": "bagian",
+          "display_section": "Bagian tampilan",
+          "pricing_form": {
+            "currency": "Mata uang",
+            "cost": "Biaya",
+            "payment": "Tautan Pembayaran",
+            "discount": "Diskon",
+            "no": "TIDAK",
+            "yes": "Ya",
+            "percent": "Persen Diskon",
+            "gift": "Tentang Hadiah"
+          },
+          "instructor_form": {
+            "upload": "Logo Instruktur",
+            "name": "Nama instruktur",
+            "name_placeholder": "Nama perusahaan Anda",
+            "role": "Peran Instruktur",
+            "about": "Tentang Instruktur",
+            "about_placeholder": "Latar belakang singkat tentang struktur",
+            "total": "Jumlah total kursus"
+          },
+          "certificate_form": {
+            "upload_template": "Templat sertifikat"
+          },
+          "reviews_form": {
+            "add_reviews": "Tambahkan Ulasan",
+            "fullname": "Nama Lengkap",
+            "description": "Keterangan",
+            "rating": "Peringkat",
+            "hide": "Sembunyikan Ulasan",
+            "validations": {
+              "invalid_type_error": "Tidak boleh kosong",
+              "description": {
+                "min_char": "'Deskripsi terlalu pendek, minimal 5 karakter"
+              },
+              "rating": {
+                "message": "Peringkat harus dari 1-5"
+              },
+              "avatar_url": {
+                "message": "Unggah gambar"
+              },
+              "name": {
+                "min_char": "Nama terlalu pendek, minimal 5 karakter"
+              }
+            }
+          },
+          "header_form": {
+            "title": "Judul",
+            "description": "Keterangan",
+            "short_video": "Video Pendek",
+            "replace_cover": "Ganti gambar sampul",
+            "replace": "Mengganti",
+            "helper": "Masukkan tautan ke video youtube"
+          },
+          "title": {
+            "header": "Tajuk",
+            "requirement": "Persyaratan",
+            "description": "Keterangan",
+            "goals": "Sasaran",
+            "reviews": "Ulasan",
+            "instructor": "Pengajar",
+            "pricing": "Harga",
+            "certificate": "Sertifikat"
+          }
+        }
+      },
+      "certificates": {
+        "title": "Sertifikat",
+        "certificate_settings": "Pengaturan Sertifikat",
+        "theme": "Pilih tema",
+        "logo": "Logo Merek",
+        "to_update": "Untuk memperbarui citra merek Anda, buka",
+        "settings": "Pengaturan > Pengaturan organisasi",
+        "and_upload": "dan unggah logo merek Anda",
+        "goto_settings": "Buka Pengaturan",
+        "description": "Deskripsi Kursus",
+        "placeholder": "sedikit penjelasan tentang kursus tersebut",
+        "allow": "Izinkan siswa mengunduh sertifikat",
+        "locked": "Terkunci",
+        "unlocked": "Tidak terkunci",
+        "save": "Simpan Perubahan",
+        "unlocked_certificate": "Selamat! 🎉 sertifikat Anda sudah siap",
+        "unlocked_certificate_subtitle": "Anda telah menyelesaikan kursus ini, dan dedikasi Anda terlihat jelas. Unduh sertifikat dan bagikan dengan jaringan Anda sebagai bukti keahlian baru Anda",
+        "locked_certificate": "Sertifikat tidak tersedia",
+        "instructor_unlock": "Instruktur Anda perlu membuka kunci sertifikat Anda.",
+        "contact_instructor": "Jika Anda memerlukan sertifikat Anda, silakan hubungi instruktur Anda.",
+        "download_certificate": "Unduh Sertifikat",
+        "complete_to_download_title": "Kursus belum selesai 😔",
+        "complete_to_download_subtitle": "Sertifikat Anda akan tersedia setelah Anda menyelesaikan semua pelajaran dan latihan dalam kursus ini",
+        "description_error": "Deskripsi tidak boleh melebihi 200 karakter",
+        "characters": "karakter",
+        "unexpected_error": "Terjadi kesalahan yang tidak terduga"
+      },
+      "people": {
+        "title": "Rakyat",
+        "add": "Menambahkan",
+        "search": "Cari orang",
+        "you": "Anda",
+        "pending": "Tertunda",
+        "name": "Nama",
+        "role": "Peran",
+        "action": "Tindakan",
+        "feedback": "Menyalin Email ke papan klip",
+        "view": "Melihat",
+        "delete_profile": "Hapus profil",
+        "teams": {
+          "add": "Menambahkan",
+          "add_team": "Tambahkan rekan tim atau kolaborator ke organisasi Anda. Mulailah bekerja sama",
+          "invite": "Mengundang",
+          "placeholder": "email dipisahkan koma",
+          "role": "Peran",
+          "send_invite": "Kirim Undangan",
+          "members": "Anggota",
+          "invite_sent": "Undangan Terkirim",
+          "you": "Anda",
+          "remove": "Menghapus"
+        },
+        "roles": {
+          "admin": "Admin",
+          "tutor": "guru",
+          "student": "Murid",
+          "filter": "Menyaring"
+        },
+        "delete_confirmation": {
+          "title": "Menghapus",
+          "sure": "Apakah Anda yakin ingin menghapus",
+          "no": "TIDAK",
+          "yes": "Ya"
+        },
+        "invite_modal": {
+          "title": "Undang orang",
+          "invite": "Undang Tutor",
+          "select": "Pilih tutor di organisasi...",
+          "to_add": "Untuk menambahkan tutor ke organisasi Anda,",
+          "go_to": "buka pengaturan organisasi",
+          "invite_students": "Undang Siswa",
+          "via_link": "Anda dapat mengundang siswa melalui tautan undangan",
+          "via_qr": "Anda dapat mengundang siswa melalui QR",
+          "download_qr": "Unduh kode QR",
+          "qr_downloading_snackbar": "Kode QR berhasil dibuat, harap tunggu selagi diunduh",
+          "copy_link": "Salin tautan",
+          "success": "Berhasil Disalin",
+          "finish": "Menyelesaikan"
+        }
+      },
+      "marks": {
+        "title": "Tanda",
+        "student": "Murid",
+        "total": "Total",
+        "no_student": "Tidak Ada Siswa yang Ditambahkan",
+        "export": {
+          "csv": "Ekspor sebagai CSV",
+          "pdf": "Ekspor sebagai PDF"
+        }
+      },
+      "submissions": {
+        "title": "Latihan yang Dikirim",
+        "grading_modal": {
+          "details": "Detail",
+          "early": "Lebih awal",
+          "late": "Terlambat",
+          "total_grade": "Nilai keseluruhan",
+          "student": "Murid",
+          "status": "Status",
+          "add_comment": "Tambahkan komentar",
+          "add_comment_placeholder": "Tinggalkan komentar",
+          "grade_with_ai": "Nilai dengan AI",
+          "submit_grades": "Kirim Nilai",
+          "accept_grade": "Menerima",
+          "reject_grade": "Menolak",
+          "allocated": "Mengalokasikan skor ini karena",
+          "total_try": "dari total percobaan:",
+          "options_correct": "pilihan yang benar telah dipilih",
+          "out_of": "dari",
+          "options_wrong": "dan jumlah pilihan yang salah adalah",
+          "questions_tried": "Mengalokasikan skor ini karena total percobaan:",
+          "delete_prompt": "Menghapus",
+          "delete_error": "Gagal menghapus kiriman",
+          "delete_success": "Kiriman berhasil dihapus"
+        },
+        "submission_status": {
+          "submitted": "Dikirim",
+          "in_progress": "Sedang Berlangsung",
+          "graded": "Bertingkat"
+        }
+      },
+      "attendance": {
+        "title": "Kehadiran",
+        "present": "Hadiah",
+        "absent": "Absen",
+        "search_students": "Cari Siswa",
+        "student": "Murid",
+        "lesson": "Pelajaran",
+        "no_student": "Tidak Ada Siswa yang Ditambahkan"
+      },
+      "lessons": {
+        "heading": "Pelajaran",
+        "heading_v2": "Isi",
+        "drag": "seret kartu untuk menyusun ulang",
+        "no_lesson": "Belum ada pelajaran",
+        "share_your_knowledge": "Bagikan pengetahuan Anda kepada dunia dengan menciptakan pelajaran yang menarik. Mulailah dengan mengklik tombol Tambah.",
+        "join_lesson": "Bergabunglah dengan pelajaran",
+        "no_link": "Tidak ada tautan",
+        "no_tutor": "Tidak ada tutor yang ditambahkan",
+        "body_header": "Belum ada pelajaran",
+        "body_content": "Bagikan pengetahuan Anda kepada dunia dengan menciptakan pelajaran yang menarik. Mulailah dengan mengklik tombol Tambah.",
+        "download_pdf": "Unduh PDF",
+        "autosaving": "Penyimpanan otomatis...",
+        "done": "Selesai",
+        "edit": "Sunting",
+        "mark_as": "Tandai sebagai",
+        "incomplete": "Tidak lengkap",
+        "complete": "Menyelesaikan",
+        "next": "Berikutnya",
+        "prev": "Sebelumnya",
+        "disabled": "Fitur dinonaktifkan",
+        "version_history": {
+          "title": "Riwayat versi",
+          "fetch_more_versions": "Ambil lebih banyak versi",
+          "current_version": "Versi saat ini",
+          "restore_version": "Pulihkan versi ini"
+        },
+        "poll": {
+          "voted": "Telah memilih",
+          "created_by": "Dibuat oleh",
+          "status": "Status",
+          "draft": "Draf",
+          "publish": "Menerbitkan",
+          "expiration": "Kedaluwarsa",
+          "total_voted": "Jumlah Suara",
+          "responses": "Tanggapan",
+          "expires": "Kedaluwarsa",
+          "today": "Hari ini",
+          "back": "Kembali",
+          "result": "Hasil",
+          "delete": "Menghapus",
+          "create_poll": "Buat jajak pendapat",
+          "question": "Pertanyaan",
+          "options": "Pilihan",
+          "option_label": "Label Opsi",
+          "cancel": "Membatalkan",
+          "poll_question": "Pertanyaan Jajak Pendapat"
+        },
+        "polls": {
+          "title": "Pemilihan",
+          "active_polls": "Jajak Pendapat Aktif",
+          "expired_polls": "Jajak Pendapat Kedaluwarsa",
+          "loading": "Memuat...",
+          "no_polls": "Tidak ada jajak pendapat untuk ditampilkan"
+        },
+        "comments": {
+          "title": "Komentar",
+          "you": "Anda",
+          "text_area_title": "Tinggalkan komentar",
+          "placeholder": "Apa pendapat Anda tentang pelajaran ini?",
+          "comment_btn": "Komentar",
+          "cancel_btn": "Membatalkan",
+          "load_more_btn": "Muat lebih banyak"
+        },
+        "exercises": {
+          "heading": "Semua Latihan",
+          "add_button": "Menambahkan",
+          "no_exercises": "Tidak ada latihan yang ditambahkan untuk pelajaran ini",
+          "no_assigned_exercises": "Tutor Anda belum menugaskan latihan apa pun untuk pelajaran ini. Untuk sebagian besar waktu, Anda bisa",
+          "chill": "bersantai dengan anak laki-laki besar",
+          "add_exercise": "Bagikan pengetahuan Anda kepada dunia dengan membuat latihan yang menarik. Tambahkan latihan sekarang.",
+          "all_exercises": {
+            "heading": "Semua Latihan",
+            "questions": "Pertanyaan",
+            "submissions": "Kiriman",
+            "save": "Menyimpan",
+            "preview": "Pratinjau",
+            "reorder": "Susun Ulang Pertanyaan",
+            "delete_exercise": "Hapus Latihan",
+            "order_questions": "Pertanyaan pesanan",
+            "write_your_answer": "Tulis jawaban Anda",
+            "write_your_answer_here": "Tulis jawaban Anda di sini",
+            "no_answer": "Tidak ada jawaban yang diberikan",
+            "write_your_question_here": "Tulis pertanyaan Anda di sini",
+            "write_your_title": "Tulis judul Anda di sini",
+            "write_your_subtitle": "Tulis subtitle Anda di sini",
+            "highlight": "Tulis sorotan judul Anda di sini",
+            "content": "Tulis Konten Anda di sini",
+            "video": "Tulis tautan video Anda di sini",
+            "link": "Tulis tautan Anda di sini",
+            "label": "Tulis label Anda di sini",
+            "email": "Tulis email Anda di sini",
+            "facebook": "Tulis tautan Facebook Anda di sini",
+            "twitter": "Tulis tautan Twitter Anda di sini",
+            "linkedin": "Tulis tautan LinkedIn Anda di sini",
+            "number": "Tulis nomor telepon Anda di sini",
+            "previous": "Sebelumnya",
+            "finish": "Menyelesaikan",
+            "next": "Berikutnya",
+            "check": "Memeriksa",
+            "analytics": {
+              "submissions": "Kiriman",
+              "individual": {
+                "heading": "Individu",
+                "answers": "Jawaban Individu",
+                "no": "Tidak ada jawaban yang diberikan"
+              },
+              "summary": {
+                "heading": "Ringkasan",
+                "question_chart": "Bagan Pertanyaan"
+              }
+            },
+            "view_mode": {
+              "no_question": "Tidak ada pertanyaan yang ditambahkan untuk latihan ini",
+              "edit": "Sunting",
+              "button": "tombol untuk menambahkan",
+              "questions": "pertanyaan",
+              "points": "poin",
+              "all": "Semua diperlukan",
+              "due": "Jatuh tempo pada",
+              "no_description": "Tidak ada deskripsi",
+              "start": "Awal",
+              "graded": "Bertingkat",
+              "pending": "Tertunda",
+              "submitted": "Dikirim",
+              "status_pending": "Status: Menunggu Peninjauan",
+              "status_graded": "Status: Peninjauan Selesai",
+              "status_submitted": "Status: Dikirim"
+            },
+            "edit_mode": {
+              "delete_modal": "Hapus Latihan",
+              "sure": "Apakah Anda yakin ingin menghapus latihan ini?",
+              "no": "Tidak, batalkan",
+              "yes": "Ya, hapus",
+              "deleting": "Menghapus...",
+              "error": "Anda memiliki beberapa kesalahan",
+              "question": "Pertanyaan",
+              "write": "Tulis kode Anda",
+              "option": "Tambahkan opsi",
+              "question_types": {
+                "single": "Jawaban tunggal",
+                "multiple": "Banyak jawaban",
+                "paragraph": "Ayat"
+              }
+            },
+            "delete_confirmation": {
+              "title": "Hapus pertanyaan",
+              "sure": "Apakah Anda yakin ingin menghapus pertanyaan ini",
+              "no": "Tidak, tolong jangan",
+              "yes": "Ya, hapus"
+            },
+            "description": {
+              "title": "Judul",
+              "heading": "Keterangan",
+              "describe": "Jelaskan latihan tersebut kepada siswa Anda",
+              "no": "Tidak ada deskripsi"
+            }
+          },
+          "new_exercise_modal": {
+            "heading": "Latihan Baru",
+            "how": "Bagaimana Anda ingin membuat latihan Anda",
+            "coming_soon": "Segera hadir",
+            "next": "Berikutnya",
+            "title": "Beri judul pada latihan Anda",
+            "title_placeholder": "Nama latihan",
+            "finish": "Menyelesaikan",
+            "select_template": "Pilih templat",
+            "questions": "Pertanyaan",
+            "points": "Poin",
+            "back": "Kembali",
+            "create_exercises": "Buat latihan dari Notes dengan AI",
+            "choose_questions": "Pilih berapa banyak pertanyaan dan opsi yang Anda inginkan dan AI akan membantu Anda membuat latihan dari catatan Anda. Ayo pergi.",
+            "how_many_questions": "Berapa banyak pertanyaan yang ingin Anda buat?",
+            "how_many_options": "Berapa banyak opsi per pertanyaan yang Anda inginkan?",
+            "add_note": "Silakan tambahkan catatan untuk menggunakan fitur ini",
+            "generate": "Menghasilkan",
+            "completion": "Generasi AI Selesai",
+            "click_generate": "Klik 'Hasilkan' untuk keajaiban",
+            "options": {
+              "from_scratch": "Dari Awal",
+              "from_scratch_subtitle": "Buat latihan Anda dari awal jika pertanyaan Anda sudah siap",
+              "use_template": "Gunakan Templat",
+              "use_template_subtitle": "Pilih dari 100+ templat latihan yang telah ditentukan sebelumnya untuk membantu Anda memulai",
+              "use_ai": "Gunakan AI",
+              "use_ai_subtitle": "Anda dapat membuat latihan dengan AI dari catatan Anda"
+            }
+          }
+        },
+        "materials": {
+          "body_heading": "Belum ada catatan, video atau slide yang ditambahkan untuk pelajaran ini",
+          "body_content": "Bagikan pengetahuan Anda kepada siswa Anda dengan membuat konten yang menarik. Mulailah dengan mengklik",
+          "get_started": "Memulai",
+          "no_translation": "Tidak ada terjemahan untuk bahasa yang dipilih",
+          "button": "tombol",
+          "button_done": "Selesai",
+          "tabs": {
+            "document": {
+              "title": "dokumen",
+              "add_document": "Tambahkan Dokumen",
+              "no_document": "Belum ada dokumen yang diunggah",
+              "view_document": "Lihat Dokumen",
+              "download": "Unduh",
+              "upload_document": "Unggah Dokumen",
+              "upload_title": "Unggah Dokumen",
+              "upload_description": "Unggah file PDF, DOCX, atau DOC. Ukuran maksimum: 5MB",
+              "drag_drop": "Seret dan letakkan dokumen Anda di sini",
+              "or": "atau",
+              "choose_file": "Pilih File",
+              "cancel": "Membatalkan",
+              "uploading": "Mengunggah...",
+              "upload_success": "Dokumen berhasil diunggah!",
+              "upload_error": "Gagal mengunggah dokumen",
+              "file_type_error": "Jenis file tidak didukung. Silakan unggah file PDF, DOCX, atau DOC.",
+              "file_size_error": "Ukuran file terlalu besar. Ukuran maksimum adalah {size}.",
+              "type": "Jenis",
+              "size": "Ukuran",
+              "upload_error_title": "Kesalahan Pengunggahan",
+              "upload_error_message": "Format file yang tidak didukung atau unggahan gagal",
+              "upload_error_try_again": "Silakan coba lagi dengan file dokumen yang valid",
+              "try_again": "Coba Lagi",
+              "upgrade": "Tingkatkan rencana Anda untuk mengunggah dokumen",
+              "cancel_upload": "Batalkan Pengunggahan",
+              "upload_cancelled": "Unggahan dibatalkan oleh pengguna",
+              "downloading": "Mengunduh...",
+              "view_pdf": "Lihat PDF",
+              "delete": "Menghapus",
+              "page_of": "Halaman {halaman} dari {total}",
+              "loading_pdf": "Memuat PDF...",
+              "failed_to_load_pdf": "Gagal memuat dokumen PDF",
+              "failed_to_render_pdf": "Gagal merender halaman PDF",
+              "use_arrow_keys": "Gunakan tombol panah untuk bernavigasi, +/- untuk memperbesar, atau klik kontrol di atas. Klik kanan dinonaktifkan."
+            },
+            "video": {
+              "title": "Video",
+              "embed_link": "Sematkan Tautan",
+              "upload": "Mengunggah",
+              "button": "Tambahkan/Edit Video",
+              "add_video": {
+                "title": "Tambahkan Video",
+                "add_by": "Tambahkan Oleh",
+                "youtube_link": "Tautan Youtube",
+                "videos_added": "Video Ditambahkan",
+                "add_video": "Tambahkan Video",
+                "upload_video": "Unggah Video",
+                "select_file": "Pilih file (Mp4, MOV, AVI) untuk diunggah ke pelajaran Anda.",
+                "size": "(Maks 500MB)",
+                "oops": "Ups `😬, tidak dapat mengunggah video",
+                "big_file": "Maaf video kami tidak diunggah. Ukuran file terlalu besar,",
+                "maximum_size": "ukuran maksimum adalah 30 MB. Coba lagi!",
+                "button": "Coba file lain",
+                "try_again": "Silakan coba lagi",
+                "unsupported_format": "Maaf, video kami tidak dapat diunggah, format file tidak didukung, atau terjadi kesalahan pada server.",
+                "format": "Unggah file MP4, MOV dan AVI.",
+                "upgrade": "Tingkatkan rencana Anda untuk mengunggah video",
+                "uploading": "Mengunggah...",
+                "invalid_youtube": "Tautan YouTube tidak valid",
+                "invalid_link": "Tautan tidak valid",
+                "cancel_upload": "Batalkan Pengunggahan",
+                "upload_cancelled": "Unggahan dibatalkan oleh pengguna"
+              }
+            },
+            "slide": {
+              "title": "Menggeser",
+              "slide_link": "Tautan Geser",
+              "helper_message": "Anda dapat menyematkan Google Slide atau Presentasi Canva"
+            },
+            "note": {
+              "title": "Catatan",
+              "placeholder": "Tulis catatan pelajaran Anda di sini",
+              "ai": {
+                "outline": "Hasilkan Garis Besar Pelajaran",
+                "note": "Hasilkan Catatan Pelajaran",
+                "activities": "Hasilkan Aktivitas Pelajaran"
+              }
+            }
+          }
+        },
+        "lesson_nav": {
+          "materials": "Bahan",
+          "exercises": "Latihan"
+        },
+        "add_lesson": {
+          "button_title": "Menambahkan",
+          "start_reorder": "Susun ulang",
+          "end_reorder": "Akhiri Penyusunan Ulang",
+          "modal_heading": "Tambahkan Pelajaran Baru",
+          "modal_heading_section": "Tambahkan Bagian Baru",
+          "lesson_title": "Judul Pelajaran",
+          "lesson_section_title": "Judul Bagian",
+          "click_to": "Klik untuk",
+          "lock": "Kunci",
+          "unlock": "Membuka kunci",
+          "fullname": "nama lengkap",
+          "save": "Menyimpan",
+          "edit": "Sunting",
+          "delete": "Menghapus",
+          "cancel": "Membatalkan"
+        },
+        "section_prompt": {
+          "cta": "Aktifkan Bagian",
+          "header": "Aktifkan Bagian",
+          "title": "Kami Meluncurkan Bagian Kursus",
+          "description": "Anda sekarang dapat mengelompokkan pelajaran menjadi beberapa bagian untuk mengatur konten Anda dan membuat pembelajaran lebih lancar bagi siswa Anda.",
+          "activate": "Mengaktifkan",
+          "cancel": "Membatalkan"
+        }
+      },
+      "news_feed": {
+        "heading": "Umpan Berita",
+        "body_header": "Belum ada postingan",
+        "body_content": "Buatlah postingan di kelasmu. Mulailah dengan mengklik tombol Tambah.",
+        "pinned": "Disematkan",
+        "snackbar": {
+          "comment_deleted": "Komentar Dihapus",
+          "reaction_error": "Terjadi kesalahan saat bereaksi terhadap umpan berita",
+          "comment_creation_error": "Terjadi kesalahan saat membuat komentar",
+          "add_comment_success": "Komentar ditambahkan",
+          "toggle_pin_error": "Gagal mengalihkan feed yang dipasangi pin",
+          "unpinned": "Dilepas pinnya",
+          "successfully": "Berhasil",
+          "feed_delete_success": "Umpan berhasil dihapus",
+          "fetch_feed_fail": "Gagal mengambil feed berita",
+          "fetching_error": "Terjadi error saat mengambil feed"
+        },
+        "heading_button": {
+          "title": "Menambahkan",
+          "edit_post": "Sunting Posting",
+          "make_a_post": "Buat Postingan",
+          "placeholder": "Bagikan pembaruan dengan siswa Anda",
+          "cancel": "Membatalkan",
+          "post": "Pos"
+        }
+      }
+    },
+    "navItems": {
+      "nav_news_feed": "Umpan Berita",
+      "nav_content": "Isi",
+      "nav_attendance": "Kehadiran",
+      "nav_submissions": "Kiriman",
+      "nav_marks": "Tanda",
+      "nav_people": "Rakyat",
+      "nav_analytics": "Analisis",
+      "nav_certificates": "Sertifikat",
+      "nav_landing_page": "Halaman Arahan",
+      "nav_settings": "Pengaturan"
+    }
+  },
+  "courses": {
+    "heading": "Kursus",
+    "heading_button": "Buat Kursus",
+    "search_placeholder": "Temukan Kursus",
+    "new_course_modal": {
+      "heading": "Buat Kursus",
+      "course_name": "Nama kursus",
+      "type": "Jenis kursus",
+      "course_name_placeholder": "Nama kursus Anda",
+      "short_description": "Deskripsi Singkat",
+      "short_description_placeholder": "Sedikit penjelasan tentang kursus ini",
+      "type_selector_title": "Jenis kursus apa yang Anda cari?",
+      "button": "Menyelesaikan",
+      "back": "Kembali",
+      "next": "Berikutnya"
+    },
+    "course_card": {
+      "empty_title": "Tidak Ada Kursus yang Dibuat",
+      "empty_description": "Bagikan pengetahuan Anda kepada dunia dengan membuat kursus menarik untuk siswa Anda.",
+      "error_message": "Terjadi kesalahan.",
+      "lessons_number": "pelajaran",
+      "students": "siswa",
+      "published": "Diterbitkan",
+      "unpublished": "Tidak diterbitkan",
+      "continue_course": "Lanjutkan Kursus",
+      "learn_more": "Pelajari lebih lanjut",
+      "list_view": {
+        "title": "Judul",
+        "description": "Keterangan",
+        "lessons": "Pelajaran",
+        "students": "Siswa",
+        "published": "Diterbitkan",
+        "type": "Jenis"
+      },
+      "context_menu": {
+        "clone": "Klon",
+        "share": "Membagikan",
+        "invite": "Mengundang",
+        "delete": "Menghapus"
+      }
+    },
+    "course_filter": {
+      "date_created": "Tanggal Dibuat",
+      "published": "Diterbitkan",
+      "lessons": "Pelajaran"
+    }
+  },
+  "ai": {
+    "help_me": "Bantu aku menulis",
+    "placeholder": "Bantu saya menulis deskripsi singkat",
+    "text": "Mulai mengetik...",
+    "reset": "Mengatur ulang",
+    "rephrase": "Ulangi",
+    "insert": "Menyisipkan",
+    "can_you": "Bisakah Anda ulangi ini"
+  },
+  "dashboard": {
+    "morning_heading": "Selamat pagi",
+    "afternoon_heading": "Selamat siang",
+    "evening_heading": "Selamat malam",
+    "create_course": "Buat Kursus",
+    "view_site": "Lihat Situs",
+    "visit_site": "Kunjungi Situs Web",
+    "current_lesson": "Sedang Belajar",
+    "your_progress": "Kemajuan Anda",
+    "continue": "Melanjutkan",
+    "no_courses": "Belum ada kursus yang sedang berlangsung",
+    "start_course": "Setelah Anda memulai kursus, kemajuan Anda akan terlihat di sini",
+    "lms_dashboard_hero": "Hari ini adalah hari lain untuk membawa Anda lebih dekat ke tujuan pembelajaran Anda. Jangan menyerah, semakin banyak Anda belajar, semakin baik Anda.",
+    "dont": "Jangan menyerah",
+    "lessons_completed": "Pelajaran selesai",
+    "no_courses_started": "Tidak ada kursus yang dimulai",
+    "revenue": "Pendapatan",
+    "revenue_description": "Perkiraan pendapatan yang diperoleh dari penjualan kursus",
+    "no_of_courses": "Jumlah kursus",
+    "no_courses_description": "Kursus yang dibuat dalam organisasi ini",
+    "total_students": "Jumlah siswa",
+    "total_students_description": "Berdasarkan pendaftaran siswa",
+    "top_courses": "Kursus Teratas",
+    "students": "siswa",
+    "student": "murid",
+    "completion": "penyelesaian",
+    "create_first_course": "Buat Kursus Pertama Anda",
+    "create_first_course_description": "Mulailah membuat kursus untuk melacak kemajuan kursus",
+    "recent_enrollments": "Pendaftaran Terbaru",
+    "publish_first_course": "Publikasikan Kursus Pertama Anda",
+    "publish_first_course_description": "Untuk melacak pendaftaran, publikasikan kursus dan undang siswa",
+    "publish_course": "Publikasikan Kursus"
+  },
+  "schedule": {
+    "title": "Jadwal Anda",
+    "essence": "Inti dari kolaborasi desain",
+    "figma": "Pengenalan Figma",
+    "join": "Gabung Panggilan",
+    "no": "Tidak Ada Pelajaran pada hari ini"
+  },
+  "components": {
+    "settings": {
+      "customize_lms": {
+        "title": "Sesuaikan LMS",
+        "disabled": "Dengan disabilitas",
+        "enabled": "Diaktifkan",
+        "save": "Simpan Perubahan",
+        "apps": {
+          "title": "Aplikasi",
+          "poll": "Pemilihan",
+          "live_comment": "Komentar langsung"
+        },
+        "course": {
+          "title": "Kursus",
+          "newsfeed": "Umpan berita",
+          "grading": "Penilaian"
+        },
+        "dashboard": {
+          "title": "Dasbor",
+          "community": "Masyarakat",
+          "exercises": "Latihan",
+          "banner_image": "Gambar Spanduk",
+          "banner_image_btn": "Perbarui gambar spanduk",
+          "banner_text": "Teks Spanduk",
+          "banner_text_label": "Perbarui teks spanduk",
+          "banner_text_placeholder": "Tulis teksnya di sini"
+        }
+      },
+      "domains": {
+        "title": "Domain khusus",
+        "add": "Menambahkan",
+        "url": "URL",
+        "update": "Perbarui Domain",
+        "custom": "Domain khusus",
+        "domain": "Tambahkan nama domain Anda sendiri",
+        "save": "Menyimpan",
+        "your_domain": "Domain Anda",
+        "custom_domain_error": "Anda tidak dapat menambahkan domain tingkat teratas sebagai domain khusus. Sebagai gantinya, gunakan subdomain seperti 'kursus.[situs web Anda].com' atau 'www.[situs web Anda].com'.",
+        "custom_domain_not_classroomio": "Domain tidak boleh berisi domain platform utama",
+        "custom_domain_success": "Domain khusus berhasil ditambahkan",
+        "dns_description": "Tetapkan catatan berikut pada penyedia DNS Anda untuk melanjutkan:",
+        "dns_type": "Jenis",
+        "dns_value": "Nilai",
+        "dns_name": "Nama",
+        "refresh": "Menyegarkan",
+        "remove": "Menghapus",
+        "custom_favicon": "favicon khusus",
+        "custom_code": "Kode khusus"
+      }
+    },
+    "quiz": {
+      "title": "Kuis",
+      "second": "Detik",
+      "answer": "Jawaban",
+      "question_delete": "Hapus Pertanyaan",
+      "add_more": "+ Tambahkan lebih banyak jawaban",
+      "remove_last": "- Hapus jawaban terakhir",
+      "quiz_delete": "Hapus Kuis",
+      "delete_question": "Apakah Anda yakin ingin menghapus pertanyaan ini?",
+      "delete_quiz": "Apakah Anda yakin ingin menghapus kuis ini?",
+      "lose_content": "Anda akan kehilangan konten dan tindakan ini tidak dapat diurungkan.",
+      "delete": "Menghapus",
+      "update": "Memperbarui",
+      "create": "Membuat",
+      "a_quiz": "sebuah Kuis",
+      "quiz_title": "Judul Kuis",
+      "placeholder": "Judul kuis Anda",
+      "save": "Simpan Perubahan",
+      "continue": "Melanjutkan",
+      "rename": "Ganti nama",
+      "updated": "Diperbarui",
+      "start": "Mulai Kuis",
+      "start_typing": "Mulailah mengetik pertanyaan Anda",
+      "required_field": "Bidang ini wajib diisi",
+      "type_answer": "Ketik jawaban",
+      "label": "Silakan masukkan label",
+      "no_quizz": "Tidak Ada Kuis yang Dibuat",
+      "interactive": "Buat kuis interaktif dengan papan skor untuk siswa Anda."
+    }
+  },
+  "markdown_editor": {
+    "write": "Menulis",
+    "preview": "Pratinjau"
+  },
+  "navigation": {
+    "goto": "Pergi ke",
+    "courses": "Kursus",
+    "home": "Rumah",
+    "classroomio_home": "Ruang KelasIO Beranda",
+    "dashboard": "Dasbor",
+    "discussion": "Diskusi",
+    "people": "Rakyat",
+    "goto_lms": "Pergi ke LMS",
+    "goto_home": "Buka KelasIO Beranda",
+    "login": "Login",
+    "signup": "Mendaftar",
+    "redirecting": "Mengarahkan",
+    "loading_state": "Membawa Anda ke halaman berikutnya, harap tunggu.",
+    "org_loading_state": "Membawa Anda ke organisasi Anda...",
+    "add_organization": "+ Tambahkan Organisasi"
+  },
+  "add_org": {
+    "create_org": "Buat Organisasi",
+    "name": "Nama Organisasi",
+    "org_sitename": "Nama Situs Organisasi",
+    "create": "Membuat",
+    "sitename": "Nama situs sudah ada",
+    "error_organization": "Ada yang tidak beres saat membuat organisasi ini. Silakan muat ulang dan coba lagi"
+  },
+  "setup": {
+    "get_started": "Memulai",
+    "publish_course": {
+      "title": "Publikasikan kursus",
+      "desc": "Jadikan kursus Anda bersifat publik dan dapat dibeli",
+      "button_label": "Publikasikan Kursus"
+    },
+    "exercise": {
+      "title": "Buat latihan",
+      "desc": "Uji siswa Anda memungkinkan mereka untuk menunjukkan pemahaman mereka tentang materi pelajaran",
+      "button_label": "Buat Tugas"
+    },
+    "lesson": {
+      "title": "Buat pelajaran",
+      "desc": "Bagi kursus Anda menjadi pelajaran yang mudah dipahami oleh siswa Anda",
+      "button_label": "Buat Pelajaran"
+    },
+    "course": {
+      "title": "Buat Kursus",
+      "desc": "Buat kursus yang akan Anda bagikan dengan siswa Anda",
+      "button_label": "Buat Kursus"
+    },
+    "organization_profile": {
+      "title": "Perbarui gambar profil organisasi",
+      "desc": "Tetapkan identitas profesional dan dapat dikenali untuk organisasi Anda",
+      "button_label": "Perbarui Profil Organisasi"
+    },
+    "personal_profile": {
+      "title": "Unggah gambar profil dan perbarui nama pengguna",
+      "desc": "Personalisasikan dan tambahkan sentuhan manusiawi sehingga interaksi menjadi lebih pribadi dan berkesan",
+      "button_label": "Perbarui Profil"
+    }
+  },
+  "pricing": {
+    "modal": {
+      "heading": "Paket Peningkatan",
+      "thanks": "Terima kasih atas dukungan Anda",
+      "plan": "Paket Anda dilengkapi dengan fasilitas dan keuntungan menarik termasuk akses ke semua fitur masa depan yang kami rilis.",
+      "save": "Hemat 2 bulan",
+      "close": "Menutup",
+      "learn": "Pelajari lebih lanjut",
+      "month": "bulan",
+      "monthly": "Bulanan",
+      "annually": "Setiap tahun"
+    },
+    "plan_names": {
+      "free": "Bebas",
+      "early": "Pengadopsi Awal",
+      "enterprise": "Perusahaan"
+    }
+  },
+  "org_navigation": {
+    "dashboard": "Dasbor",
+    "courses": "Kursus",
+    "community": "Masyarakat",
+    "audience": "Hadirin",
+    "setup": "Pengaturan",
+    "help": "Membantu",
+    "settings": "Pengaturan",
+    "early_adopter": "Menjadi Pengadopsi Awal",
+    "unlock": "Buka fitur tak terbatas dan investasikan masa depan kita",
+    "upgrade": "Tingkatkan Sekarang"
+  },
+  "settings": {
+    "heading": "Pengaturan",
+    "billing": {
+      "sub_title": "Detail penagihan",
+      "manage": "Kelola penagihan Anda",
+      "active": "Anda tidak memiliki penagihan aktif",
+      "provider": "Kami menggunakan Polar untuk membantu mengelola penagihan Anda",
+      "open_billing": "Buka penagihan",
+      "error": "Terjadi kesalahan saat membuka penagihan"
+    },
+    "integrations": {
+      "heading": "Telegram",
+      "sub_heading": "Hubungkan akun Anda ke telegram untuk mendapat pemberitahuan tentang perubahan apa pun dalam aplikasi.",
+      "step_authenticate": "Langkah 1: Otentikasi akun Anda melalui bot ClassroomIO.",
+      "open_bot_button": "Buka Bot",
+      "step_chatId": "Langkah 2: Masukkan ID Obrolan yang diberikan kepada Anda oleh bot.",
+      "connect_button": "Menghubungkan",
+      "success_message": "Integrasi Berhasil",
+      "disconnect": "Memutuskan"
+    },
+    "landing_page": {
+      "heading": "Halaman Arahan",
+      "show_section": "Tampilkan Bagian",
+      "hide_section": "Sembunyikan Bagian",
+      "title": "Judul",
+      "title_highlight": "Judul-Sorotan",
+      "subtitle": "Subjudul",
+      "save_changes": "Simpan Perubahan",
+      "footer": {
+        "heading": "catatan kaki",
+        "show_section": "Tampilkan Bagian",
+        "hide_section": "Sembunyikan Bagian",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn"
+      },
+      "mailing_list": {
+        "heading": "milis",
+        "show_section": "Tampilkan Bagian",
+        "hide_section": "Sembunyikan Bagian",
+        "title": "Judul",
+        "subtitle": "Subjudul",
+        "button_label": "Label tombol"
+      },
+      "contact_us": {
+        "heading": "Hubungi kami",
+        "show_section": "Tampilkan Bagian",
+        "hide_section": "Sembunyikan Bagian",
+        "title": "Judul",
+        "title_highlight": "Judul-Sorotan",
+        "subtitle": "Subjudul",
+        "phone_number": "Nomor telepon",
+        "email": "E-mail"
+      },
+      "faq": {
+        "heading": "Pertanyaan yang Sering Diajukan",
+        "show_section": "Tampilkan Bagian",
+        "hide_section": "Sembunyikan Bagian",
+        "title": "Judul",
+        "question": "Pertanyaan",
+        "answer": "Menjawab",
+        "button": "Tambahkan FAQ Baru",
+        "save": "Menyimpan",
+        "cancel": "Membatalkan"
+      },
+      "courses": {
+        "heading": "Kursus",
+        "show_section": "Tampilkan Bagian",
+        "hide_section": "Sembunyikan Bagian",
+        "title": "Judul",
+        "title_highlight": "Judul-Sorotan",
+        "subtitle": "Subjudul"
+      },
+      "about": {
+        "heading": "Tentang",
+        "title": "Judul",
+        "content": "Isi",
+        "upload_an_image": "Unggah gambar",
+        "select_image": "Pilih Gambar"
+      },
+      "actions": {
+        "heading": "Tindakan",
+        "label": "Label",
+        "link": "Link",
+        "no_redirect": "Tidak ada pengalihan",
+        "redirect": "Pengalihan",
+        "show_banner": "Tampilkan spanduk",
+        "hide_banner": "Sembunyikan spanduk",
+        "banner_type": {
+          "heading": "Jenis Spanduk",
+          "video": "Video",
+          "image": "Gambar"
+        }
+      },
+      "background": {
+        "title": "Gambar Latar Belakang",
+        "show_background": "Tampilkan latar belakang",
+        "hide_background": "Sembunyikan latar belakang"
+      }
+    },
+    "organization": {
+      "organization_profile": {
+        "heading": "Profil Organisasi",
+        "organization_name": "Nama Organisasi",
+        "upload_image": "Unggah Gambar",
+        "update_organization": "Perbarui Organisasi",
+        "team": {
+          "heading": "Tim",
+          "sub_heading": "Siapkan tim Anda",
+          "body": "Tambahkan rekan tim ke organisasi Anda sehingga Anda berdua bisa berkolaborasi dalam proyek.",
+          "button": "Kelola Tim"
+        },
+        "custom_domain": {
+          "heading": "Domain Khusus",
+          "sub_heading": "Sesuaikan Domain Anda",
+          "body": "Buat URL khusus sehingga audiens Anda dapat mengakses organisasi Anda dengan mudah",
+          "button": "Sunting domain"
+        },
+        "customize_lms": {
+          "heading": "Sesuaikan LMS",
+          "sub_heading": "Personalisasikan LMS Organisasi Anda",
+          "body": "Kontrol pengalaman belajar siswa Anda. Anda dapat mengaktifkan atau menonaktifkan tab dan halaman, memperbarui spanduk LMS dan komentar dalam aplikasi sesuai kebutuhan organisasi Anda",
+          "button": "Sesuaikan LMS"
+        },
+        "theme": {
+          "heading": "Tema",
+          "sub_heading": "Tetapkan warna merek Anda",
+          "custom_theme": "Tema Kustom",
+          "add_theme": "Tambahkan Tema"
+        }
+      }
+    },
+    "profile": {
+      "update_profile": "Perbarui Profil",
+      "logout": "Keluar",
+      "personal_information": {
+        "heading": "Informasi Pribadi",
+        "full_name": "Nama Lengkap",
+        "username": "Nama belakang",
+        "email": "E-mail"
+      },
+      "profile_picture": {
+        "heading": "Foto profil",
+        "upload_image": "Unggah Gambar",
+        "file_size": "Ukuran file maksimal:",
+        "accepted": "Diterima:",
+        "validation_error": "Ukuran file melebihi batas maksimum:"
+      }
+    },
+    "tabs": {
+      "profile_tab": "Profil",
+      "organization_tab": "Organisasi",
+      "landing_page_tab": "Halaman Arahan",
+      "billing_tab": "Penagihan",
+      "integrations_tab": "Integrasi",
+      "language_tab": "Bahasa"
+    },
+    "subheadings": {
+      "view_site": "Lihat situs"
+    }
+  },
+  "profileMenu": {
+    "profile": "PROFIL",
+    "current_org": "ORGANISASI SAAT INI",
+    "free_tools": "ALAT GRATIS",
+    "progress": "Laporan kemajuan",
+    "timer": "Pengatur waktu aktivitas",
+    "tic_tac": "Jari kaki tiktak",
+    "see_more": "Lihat selengkapnya",
+    "whats_new": "Apa yang baru",
+    "launch_week": "Minggu peluncuran"
+  },
+  "login": {
+    "welcome": "Selamat Datang kembali",
+    "email": "email Anda",
+    "password": "Kata sandi Anda",
+    "forgot": "Lupa kata sandi?",
+    "login": "Masuk",
+    "login_with": "atau masuk dengan",
+    "signup_with": "atau mendaftar dengan",
+    "already_have_account": "Sudah punya akun?",
+    "not_registered_yet": "Belum terdaftar?",
+    "signup": "Mendaftar",
+    "signup_with_google": "Daftar dengan Google",
+    "login_with_google": "Masuk dengan Google",
+    "create_to_join": "Buat akun gratis untuk bergabung",
+    "create_account": "Buat Akun",
+    "login_to_join": "Masuk untuk bergabung",
+    "validation": {
+      "unable_to_create_profile": "Tidak dapat membuat profil",
+      "user_cannot_be_created": "Pengguna tidak dapat dibuat"
+    },
+    "fields": {
+      "email": "Email Anda",
+      "full_name": "Nama Lengkap",
+      "password": "Kata Sandi Anda",
+      "confirm_password": "Konfirmasi Kata Sandi",
+      "password_helper_message": "Kata sandi harus lebih dari 6 karakter",
+      "create_account": "Buat Akun"
+    }
+  },
+  "welcome_modal": {
+    "we_at": "Kami di",
+    "small_team": "adalah tim kecil dengan misi besar untuk memberdayakan para pendidik dengan perangkat lunak hebat untuk membantu mereka memberikan dampak dalam kehidupan masyarakat. Pendidikan adalah hadiah paling ampuh yang dapat Anda berikan kepada siapa pun, dan sangat masuk akal untuk memberi Anda semua alat yang Anda perlukan untuk memberikan HADIAH ini kepada lebih banyak orang.",
+    "thank_you": "Terima kasih telah memilih kami",
+    "deeply_appreciate": "kami sangat menghargainya dan siap melayani Anda."
+  },
+  "onboarding": {
+    "sell": "Jual kursus online",
+    "teach": "Ajari siswa saya saat ini secara online",
+    "expanding": "Di platform lain, berkembang di sini",
+    "employees": "Latih karyawan saya",
+    "customers": "Buat kursus untuk pelanggan saya",
+    "explore": "Hanya di sini untuk menjelajah",
+    "articles": "Artikel",
+    "search": "Mesin pencari",
+    "social": "media sosial",
+    "friends": "Teman dan keluarga",
+    "fullname": "Nama Lengkap",
+    "name": "Nama Organisasi",
+    "organisation_sitename": "Nama Situs Organisasi",
+    "what_brings": "Apa yang membawamu ke sana",
+    "how": "Bagaimana Anda mendengar tentang kami?",
+    "back": "Kembali",
+    "continue": "Melanjutkan"
+  },
+  "delete_modal": {
+    "label": "Menghapus",
+    "content": "Apa kamu yakin?",
+    "no": "TIDAK",
+    "yes": "Ya"
+  },
+  "verify_email_modal": {
+    "heading": "Verifikasi Email Anda",
+    "sent_verification": "Kami telah mengirimkan email verifikasi ke",
+    "to_confirm": "untuk mengkonfirmasi keabsahan email yang diberikan.",
+    "loading": "Memuat...",
+    "resend": "Kirim Ulang Kode Verifikasi",
+    "resend_in": "Kirim ulang verifikasi masuk",
+    "seconds": "detik",
+    "snackbar_error": "kesalahan saat mengirim kode"
   }
 }
